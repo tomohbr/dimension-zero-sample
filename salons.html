@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>全国のディメンションサロン｜一般財団法人ディメンション・ゼロ</title>
+<meta name="description" content="全国のディメンションサロン一覧。都道府県から探せます。">
+<meta name="robots" content="noindex">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600&family=Zen+Kaku+Gothic+New:wght@400;500;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&display=swap">
+<link rel="stylesheet" href="vendor/lenis.css">
+<link rel="stylesheet" href="style.css?v=1789391410">
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="index.html"><img src="img/logo.png" alt="DIMENSION ZERO"><span><em class="corp">一般財団法人 </em>ディメンション・ゼロ<small>Dimension ∞ Zero</small></span></a>
+    <button class="burger" id="burger" type="button" aria-label="メニュー">メニュー</button>
+    <nav class="menu" id="menu"><a href="about.html">財団について</a><a href="products.html">製品</a><a href="profile.html">プロフィール</a><a href="events.html">イベント</a><a href="blog.html">ブログ</a><a href="voices.html">お客様の声</a><a href="recruit.html">サロン開業</a><a href="contact.html">お問い合わせ</a></nav>
+    <a class="btn primary small hd rip" href="salons.html">サロンを探す</a>
+    <a class="btn line small hd" href="https://lin.ee/uV9wFms" target="_blank" rel="noopener">公式LINE</a>
+  </div>
+</header>
+<main>
+<section class="pagehead"><div class="wrap"><div class="en">Find a Salon</div><h1 class="lr">全国のディメンションサロン</h1><p class="fade">地域と都道府県を選ぶと、サロンが出ます。ご予約・お問い合わせは各サロンへ直接どうぞ。</p></div></section>
+<section class="sec tight">
+  <div class="wrap">
+    <div class="finder">
+      <div class="regions" id="regions"></div>
+      <div class="prefs" id="prefs"></div>
+      <div class="salons" id="salons"></div>
+      <div class="finder-foot"><span id="count"></span><a class="btn small" href="recruit.html">お近くにサロンがない方へ（提携サロン募集）</a></div>
+    </div>
+  </div>
+</section>
+<script>
+var SALONS={"北海道": [{"name": "SECOND PIANO", "addr": "北海道札幌市東区", "tel": "", "note": "法人内設置のため一般利用なし"}], "埼玉": [{"name": "水のふるさと", "addr": "埼玉県川口市", "tel": ""}], "千葉": [{"name": "Dimension Salon ∞ 結 〔ゆい〕", "addr": "千葉県香取市府馬", "tel": "090-4249-2828"}], "東京": [{"name": "リプル・リズム", "addr": "東京都渋谷区恵比寿", "tel": "090-3335-8897"}, {"name": "ディメンションサロン ｋＯＫｏ〔ここ〕", "addr": "東京都中野区江古田", "tel": "090-4746-0582"}], "神奈川": [{"name": "リラクゼーションサロン Ｄ☆～Ｄｒｏｐ", "addr": "神奈川県海老名市国分南", "tel": "090-4027-4024"}, {"name": "アクアマリン", "addr": "神奈川県藤沢市藤が岡", "tel": "080-5640-4488"}], "愛知": [{"name": "遊庵", "addr": "愛知県津島市", "tel": ""}, {"name": "ヒプノセラピーサロン kokoro", "addr": "愛知県名古屋市天白区", "tel": ""}], "大阪": [{"name": "MIZUHA", "addr": "大阪府大阪市福島区福島", "tel": "090-5055-5898"}], "兵庫": [{"name": "HIKARi", "addr": "兵庫県神戸市中央区旭通4丁目1-3 シティータワー神戸三宮", "tel": "080-3036-9484"}, {"name": "LUNASOL", "addr": "兵庫県姫路市", "tel": "090-2297-5991"}], "岡山": [], "広島": [{"name": "Dエイト", "addr": "広島県広島市南区皆実町六丁目", "tel": "080-3882-1859"}, {"name": "Dimension Salon VERITE (ヴェリテ)", "addr": "広島県尾道市西御所町3-15", "tel": "090-2297-5991"}], "福岡": [{"name": "ＤＳ ∞ 190 (イチキューマル)", "addr": "福岡県大牟田市久福木", "tel": "080-3954-1901"}, {"name": "MeTA D Salon", "addr": "福岡県久留米市野中町", "tel": "080-8362-3433"}, {"name": "ヒーリングサロン Ｄらいず", "addr": "福岡県那珂川市片縄北", "tel": "090-9597-1300"}, {"name": "ヒーリングＤサロン 音 艶〔ねいろ〕", "addr": "福岡県那珂川市五郎丸", "tel": "090-8413-4205"}, {"name": "糸島 DimensionSpace Terra☆Lyra", "addr": "糸島市加布里", "tel": "080-4289-7510"}, {"name": "ボディケアＤサロン 玉 響〔たまゆら〕", "addr": "福岡県春日市須玖南", "tel": "090-6805-6453"}, {"name": "ディメンションサロン ひとしずく", "addr": "福岡県筑紫野市紫", "tel": "090-4355-9686"}, {"name": "Mizutama〔みずたま〕", "addr": "福岡県太宰府市高雄", "tel": "090-4285-8957"}, {"name": "Platinum salon ＴＥＮ", "addr": "福岡県福岡市中央区警固", "tel": "080-9978-0134"}, {"name": "Dimension Sound Healing Salon Otama〔おたま〕", "addr": "福岡県福岡市中央区薬院", "tel": "090-8762-4178"}, {"name": "melody", "addr": "福岡県筑紫野市", "tel": "090-7467-1926"}, {"name": "RYUEN", "addr": "福岡県北九州市小倉北区", "tel": "090-7455-9723"}, {"name": "ディメンションサロン フェルマータ", "addr": "福岡県糸島市志摩小富士", "tel": "080-5263-2924"}, {"name": "Dimension MIYAVI.", "addr": "福岡県福岡市西区九大学研都市駅前", "tel": "080-3186-4209"}, {"name": "アトリエääni", "addr": "糸島市志摩芥屋", "tel": "090-1731-9148"}], "佐賀": [{"name": "D☆Salon Green", "addr": "佐賀県三養基郡上峰町大字坊所", "tel": "080-3971-8932"}, {"name": "Dimension Salon Hamon ～ 波紋 ～", "addr": "佐賀県鳥栖市弥生が丘", "tel": "090-9568-7670"}], "長崎": [{"name": "Ｄ Salon ａｋｕａ 〔アクア〕", "addr": "長崎県佐世保市八幡町", "tel": "090-1694-5548"}, {"name": "Dサロン ス・ワンダフル", "addr": "長崎県長崎市本原町", "tel": "080-6448-6024"}, {"name": "Yuralis（ゆらりす）", "addr": "長崎県諫早市堂崎町", "tel": "090-9587-6304"}], "熊本": [{"name": "リラクゼーションＤサロン 民楽来〔みらくる〕", "addr": "熊本県八代市高島町", "tel": "090-9409-5336"}], "大分": [{"name": "ＤＳ ∞ 椿", "addr": "大分県日田市小山町", "tel": "090-4586-3495"}, {"name": "ディメンションサロン 輝き", "addr": "大分県大分市深河内", "tel": "090-4485-8806"}], "宮崎": [{"name": "森のいやし空間 ヒカリ", "addr": "宮崎県西臼杵郡高千穂町田原", "tel": "080-7825-2594"}], "鹿児島": [{"name": "Flow of Life", "addr": "鹿児島県鹿児島市柳町", "tel": "090-2850-3048"}], "沖縄": [{"name": "水のふるさと", "addr": "沖縄県豊見城市", "tel": ""}], "Hawaii": [{"name": "Dimension Salon Nami (波)", "addr": "411 Hobron Ln 906 Honolulu Hi 96815", "tel": "678-361-0056"}]};
+(function(){
+  var REG=[["九州・沖縄", ["福岡", "佐賀", "長崎", "熊本", "大分", "宮崎", "鹿児島", "沖縄"]], ["関東", ["東京", "神奈川", "埼玉", "千葉"]], ["中部・関西", ["愛知", "大阪", "兵庫"]], ["中国・北海道", ["広島", "岡山", "北海道"]], ["海外", ["Hawaii"]]];
+  var q=new URLSearchParams(location.search);
+  var curR=parseInt(q.get('region')||'0',10)||0,curP=q.get('pref')||null;
+  if(curP){REG.forEach(function(r,i){if(r[1].indexOf(curP)>=0)curR=i;});}
+  var regions=document.getElementById('regions'),prefs=document.getElementById('prefs'),list=document.getElementById('salons'),count=document.getElementById('count');
+  function esc(s){return String(s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
+  function draw(){
+    regions.innerHTML='';REG.forEach(function(r,i){var b=document.createElement('button');b.type='button';b.textContent=r[0];if(i===curR)b.className='on';b.onclick=function(){curR=i;curP=null;draw();};regions.appendChild(b);});
+    prefs.innerHTML='';var all=document.createElement('button');all.type='button';all.textContent='すべて';if(curP===null)all.className='on';all.onclick=function(){curP=null;draw();};prefs.appendChild(all);
+    REG[curR][1].forEach(function(p){var b=document.createElement('button');b.type='button';var n=(SALONS[p]||[]).length;b.innerHTML=esc(p)+'<span>'+n+'</span>';if(curP===p)b.className='on';b.onclick=function(){curP=p;draw();};prefs.appendChild(b);});
+    var ps=curP?[curP]:REG[curR][1];var items=[];ps.forEach(function(p){(SALONS[p]||[]).forEach(function(s){items.push([p,s]);});});
+    list.innerHTML='';
+    if(!items.length){list.innerHTML='<div class="empty">この地域のサロンは準備中です。開業をお考えの方は提携サロン募集をご覧ください。</div>';}
+    items.forEach(function(it){var p=it[0],s=it[1];var d=document.createElement('div');d.className='salon';
+      var acts='';if(s.tel)acts+='<a class="tel" href="tel:'+esc(s.tel.replace(/-/g,''))+'">電話 '+esc(s.tel)+'</a>';
+      acts+='<a class="map" target="_blank" rel="noopener" href="https://www.google.com/maps/search/'+encodeURIComponent(s.addr+' '+s.name)+'">地図</a>';
+      acts+='<a href="#">サロンの紹介</a>';
+      d.innerHTML='<div class="pref">'+esc(p)+'</div><h4>'+esc(s.name)+'</h4><div class="addr">'+esc(s.addr)+(s.note?'　'+esc(s.note):'')+'</div><div class="acts">'+acts+'</div>';
+      list.appendChild(d);});
+    var total=0;Object.keys(SALONS).forEach(function(k){total+=SALONS[k].length;});
+    count.textContent='表示 '+items.length+' 件　／　全国 '+total+' サロン';
+  }
+  draw();
+})();
+</script>
+
+</main>
+<section class="next"><div class="wrap"><div class="next-in"><div><div class="en">Next Step</div><h2 class="lr">お近くにサロンがない、どこに行けばいいか迷う</h2><p class="fade">公式LINEで「お住まいの地域」を送っていただければ、近いサロンをご案内します。</p></div><div class="next-cta"><a class="btn line rip" href="https://lin.ee/uV9wFms" target="_blank" rel="noopener">公式LINEで相談する</a><a class="btn ghost" href="recruit.html">サロンを開くという選択肢も</a></div></div></div></section>
+<section class="lineblock">
+  <div class="wrap">
+    <div class="lb-in">
+      <div class="lb-icon">LINE</div>
+      <div class="lb-text">
+        <h2>迷ったら、公式LINEへ。</h2>
+        <p>登録すると、この3つが届きます。</p>
+        <ul><li><b>お近くのサロンのご案内</b>　地域を送っていただければ、近いサロンをお返事します</li><li><b>水の振動の話を3回に分けて</b>　はじめての方向けに、短い読みもの</li><li><b>イベントの先行案内</b>　オハナシ会・オープンイベントの予定</li></ul>
+      </div>
+      <div class="lb-cta"><a class="btn line rip" href="https://lin.ee/uV9wFms" target="_blank" rel="noopener">友だち追加する</a><small>サロン開業のご相談もこちらから</small></div>
+    </div>
+    <div class="sns">
+      <a class="ig" href="https://instagram.com/dimensionzero.zero" target="_blank" rel="noopener"><i>IG</i><span>Instagram<small>@dimensionzero.zero</small></span></a>
+      <a class="yt" href="https://www.youtube.com/@%E4%B8%80%E8%88%AC%E8%B2%A1%E5%9B%A3%E6%B3%95%E4%BA%BA%E3%83%87%E3%82%A3%E3%83%A1%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%B3%E3%82%BC" target="_blank" rel="noopener"><i>▶</i><span>YouTube<small>オハナシ会の動画</small></span></a>
+      <a class="fb" href="#"><i>f</i><span>Facebook<small>ページURLを確認中</small></span></a>
+    </div>
+  </div>
+</section>
+<div class="mobilebar"><a href="salons.html">サロンを探す</a><a class="l" href="https://lin.ee/uV9wFms" target="_blank" rel="noopener">公式LINE</a><a href="recruit.html">開業相談</a></div>
+<footer>
+  <div class="wrap">
+    <div class="cols">
+      <div><h4>一般財団法人ディメンション・ゼロ</h4><p style="margin:0">鹿児島県鹿児島市南林寺町<br>dimensionzero.zero@gmail.com</p></div>
+      <div><h4>サイト</h4><a href="about.html">財団について</a><a href="salons.html">サロンを探す</a><a href="products.html">製品</a><a href="profile.html">プロフィール</a></div>
+      <div><h4>参加する</h4><a href="events.html">イベント</a><a href="blog.html">ブログ</a><a href="voices.html">お客様の声</a><a href="recruit.html">提携サロン募集</a><a href="contact.html">お問い合わせ</a><a href="admin.html">投稿画面（財団の方向け・サンプル）</a></div>
+    </div>
+    <div class="copy"><span>© 2026 Dimension ∞ Zero</span><span>構成サンプル。文章・写真は現行サイトから仮置き。ヒーローの映像は無料素材（Pexels・Mixkit）のイメージ映像</span></div>
+  </div>
+</footer>
+<div class="sample">構成サンプル</div>
+<script>window.DZ_SEED=[{"type": "event", "id": "ev-2026-10-sample", "sample": true, "title": "（サンプル）秋のオハナシ会", "date": "2026-10-18", "start": "14:00", "end": "16:00", "venue": "会場名が入ります", "address": "鹿児島県鹿児島市", "fee": "3,000円", "capacity": "30名", "organizer": "一般財団法人ディメンション・ゼロ", "applyUrl": "https://select-type.com/", "image": "", "body": "来月予定のイベントは、ここに載せます。\n\n日時・会場・参加費を入れると、イベント一覧と詳しいページができ、申込ボタンは Select Type の決済ページにつながります。"}, {"type": "event", "id": "ev-2026-04-14", "title": "田野BASE オハナシ会", "date": "2026-04-14", "venue": "田野BASE", "address": "宮崎県宮崎市田野町", "organizer": "MIZUHA", "body": ""}, {"type": "event", "id": "ev-2026-02-12", "title": "財団主催オハナシ会", "date": "2026-02-12", "venue": "鹿児島市内", "address": "鹿児島県鹿児島市", "organizer": "一般財団法人ディメンション・ゼロ", "body": ""}, {"type": "event", "id": "ev-2026-01-05", "title": "伊万里市オハナシ会", "date": "2026-01-05", "venue": "伊万里市内", "address": "佐賀県伊万里市", "organizer": "Terra☆Lyra", "body": ""}, {"type": "event", "id": "ev-2025-09-23", "title": "坐久無雲講演会～他では聞けないお話～", "date": "2025-09-23", "venue": "古民家カフェねこのひげ", "address": "熊本県玉名郡玉東町", "organizer": "DS∞190＆民楽来", "body": ""}, {"type": "event", "id": "ev-2025-08-03", "title": "ゆらりすオープンイベント ZAK MOONオハナシ会～水と振動のオハナシ～", "date": "2025-08-03", "venue": "インダインダ", "address": "長崎県諫早市", "organizer": "Yuralis（ゆらりす）", "body": ""}, {"type": "event", "id": "ev-2025-07-21", "title": "HIKARiオープンイベント", "date": "2025-07-21", "venue": "神戸国際会館 805号室", "address": "兵庫県神戸市", "organizer": "HIKARi", "body": ""}, {"type": "event", "id": "ev-2025-07-13", "title": "祝宴", "date": "2025-07-13", "venue": "北九州市内", "address": "福岡県北九州市", "organizer": "RYUEN", "body": ""}, {"type": "event", "id": "ev-2025-07-01", "title": "広島市Dエイト3周年記念イベント Zak Moonオハナシ会", "date": "2025-07-01", "venue": "男女共同参画推進センター ゆいぽーと 研修室1", "address": "広島県広島市", "organizer": "Dエイト", "body": ""}, {"type": "event", "id": "ev-2025-04-27", "title": "Zak Moonオハナシ会＠筑紫庵", "date": "2025-04-27", "venue": "山神village・麺工房 筑紫庵", "address": "福岡県筑紫野市", "organizer": "akua", "body": ""}, {"type": "event", "id": "ev-2025-03-16", "title": "水と振動のオハナシ会", "date": "2025-03-16", "venue": "ラルゴ会議室", "address": "愛知県名古屋市", "organizer": "Dエイト", "body": ""}, {"type": "event", "id": "ev-2025-03-08", "title": "坐久無雲オハナシ会＆酒蔵マルシェ", "date": "2025-03-08", "venue": "有限会社 北庄司酒造店", "address": "大阪府泉佐野市", "organizer": "おとみず樹．", "body": ""}, {"type": "event", "id": "ev-2025-02-26", "title": "楽しく生きるためのオハナシ会", "date": "2025-02-26", "venue": "10905", "address": "宮崎県宮崎市田野町", "organizer": "MIZUHA", "body": ""}, {"type": "event", "id": "ev-2024-11-16", "title": "映画「アイノオト」と坐久無雲 オハナシ会 in 名古屋", "date": "2024-11-16", "venue": "ID floor", "address": "愛知県", "organizer": "Dエイト", "body": ""}, {"type": "post", "id": "post-2026-08-26", "title": "忘れてた。（笑）", "date": "2026-08-26", "author": "ZAK", "image": "", "body": "ブログの存在が頭から消えていた。🌱\nSNSなどもほとんど見ない。\nどんどんそうなってるなぁ〜😄\nまぁ〜日々が充実してるってことでしょうか？\n\n2ndアルバムのレコーディングは\n当然ですが、進んでません。😓\n曲はほぼ出来てるし\n歌詞は、、、、ぼくは歌詞先行タイプなので最初にできてます\nけどね、、、、何が大変って\n2ndアルバムは英語なんですよ（笑）\n曲に英語詩をはめ込むのが\n超絶難しいですね～（笑）\n\nアルバムジャケットも\nできてるんですよ〜\nあれ？！画像の貼り方忘れた（笑）\n\n一応なんですけど\n１２月２４日に９曲でリリース予定です。\n１＋２＝３\n２＋４＝６\n曲数＝ ９\nてことで、お楽しみに♪"}, {"type": "post", "id": "post-2026-03-06", "title": "369へのこだわり。", "date": "2026-03-06", "author": "ZAK", "image": "", "body": "DimensionZero代表のZAKです。\nいつもありがとうございます😃\n\nかねてから、オハナシ会でお伝えさせていただいているプログラム理論を\n歌にしてみました♫\n\n遂に！３月６日９曲のアルバムが\nたくさんのプラットフォームに\n放たれました♫\n\n皆さんが登録されている\nAmazonMusic とか Spotify とか\nAppleMusic などで\ne-ZAKsun.69 で検索していただいても出てきます。\n\n構想から５ヶ月オフの時間で徹夜とかして\n３月６日９曲を叶えることができました。\n氣が向いたら聴いて下さいね〜。"}, {"type": "post", "id": "post-2026-01-29", "title": "意外とやってない。", "date": "2026-01-29", "author": "ZAK", "image": "", "body": "本拠地の鹿児島では\n意外とやってないんですよね～\nオハナシ会\n\nさっき色々このブログ書いたんですけど\n投稿したつもりが、消えました🤣\nということは、詳しく書かなくていいということだな と 勝手解釈✨😊\n\nということで、２月１２日\nお逢いしましょう。🌱✨"}];</script>
+<script src="riskwords.js?v=1789391410"></script>
+<script src="content.js?v=1789391410"></script>
+<script src="vendor/lenis.min.js"></script>
+<script src="motion.js?v=1789391410"></script>
+</body>
+</html>
