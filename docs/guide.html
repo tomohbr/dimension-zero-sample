@@ -1,0 +1,217 @@
+<meta charset="utf-8">
+<meta name="robots" content="noindex,nofollow">
+<title>公式LINE・Facebook・Googleの運用設計｜ディメンション・ゼロ様</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;1,500&family=Shippori+Mincho:wght@500;600&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap">
+<style>
+:root{--bg:#F7F5F2;--surface:#fff;--surface-2:#EFECE7;--fg:#0C0C0C;--mut:#5E574E;--faint:#98918A;--line:#DAD5CE;--gold:#B89A6A;--gold-soft:rgba(184,154,106,.4);--sea:#1F5F8B;--green:#06C755;--warn:#8C6A12;--warn-bg:#FBF3DD}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:"Zen Kaku Gothic New","Hiragino Sans",system-ui,sans-serif;font-size:16px;line-height:1.9;-webkit-font-smoothing:antialiased}
+.wrap{max-width:920px;margin:0 auto;padding:0 26px 90px}
+header{padding:56px 0 24px;border-bottom:1px solid var(--fg)}
+.kicker{font-family:"Cormorant Garamond",serif;font-style:italic;letter-spacing:.2em;color:var(--gold);font-size:14px;margin-bottom:6px}
+h1{font-family:"Shippori Mincho",serif;font-weight:500;font-size:30px;letter-spacing:.05em;margin:0 0 12px;line-height:1.5}
+.meta{font-size:14px;color:var(--mut)}
+nav.toc{position:sticky;top:0;z-index:5;background:var(--bg);display:flex;gap:8px;flex-wrap:wrap;padding:14px 0;border-bottom:1px solid var(--line)}
+nav.toc a{font-size:14.5px;font-weight:700;padding:8px 16px;border-radius:999px;border:1px solid var(--line);background:#fff;color:var(--fg);text-decoration:none}
+nav.toc a:hover{border-color:var(--fg)}
+h2{font-family:"Shippori Mincho",serif;font-weight:500;font-size:25px;letter-spacing:.04em;margin:60px 0 6px;padding-bottom:10px;border-bottom:1px solid var(--gold-soft);display:flex;gap:14px;align-items:baseline;scroll-margin-top:70px}
+h2 small{font-family:"Cormorant Garamond",serif;font-style:italic;color:var(--gold);font-size:16px;letter-spacing:.14em}
+h3{font-size:18px;margin:34px 0 8px}
+.lead{color:var(--mut);font-size:15px;margin:8px 0 18px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:20px 22px;margin:12px 0}
+.card p{margin:0 0 8px}.card p:last-child{margin:0}
+table{width:100%;border-collapse:collapse;font-size:14.5px;margin:12px 0;background:#fff}
+th,td{padding:10px 12px;border:1px solid var(--line);text-align:left;vertical-align:top}
+th{font-weight:500;color:var(--mut);font-size:13px;letter-spacing:.06em;background:var(--surface-2)}
+.scroll{overflow-x:auto}
+.scroll table{min-width:620px}
+code{font-family:ui-monospace,Menlo,monospace;font-size:13px;background:var(--surface-2);padding:1px 6px;border-radius:4px;word-break:break-all}
+.msg{white-space:pre-wrap;font-size:15px;background:#fff;border:1px solid var(--line);border-left:4px solid var(--green);border-radius:8px;padding:16px 18px;margin:10px 0}
+.note{background:var(--surface-2);border-left:3px solid var(--gold);padding:12px 16px;font-size:14.5px;color:var(--mut);margin:14px 0;border-radius:0 8px 8px 0}
+.note b{color:var(--fg)}
+.warn{background:var(--warn-bg);border-left:3px solid var(--warn);padding:12px 16px;font-size:14.5px;margin:14px 0;border-radius:0 8px 8px 0}
+.warn b{color:var(--warn)}
+ol.steps{counter-reset:s;list-style:none;margin:10px 0;padding:0}
+ol.steps li{counter-increment:s;position:relative;padding:10px 0 10px 46px;border-bottom:1px solid var(--line)}
+ol.steps li::before{content:counter(s,decimal-leading-zero);position:absolute;left:0;top:10px;font-family:"Cormorant Garamond",serif;font-size:19px;color:var(--gold)}
+.rm{width:100%;border-radius:10px;border:1px solid var(--line);display:block;margin:12px 0}
+.ok{color:#2F6B4A;font-weight:700}
+.q{color:var(--warn);font-weight:700}
+footer{margin-top:60px;padding-top:18px;border-top:1px solid var(--line);font-size:12.5px;color:var(--faint);text-align:center}
+@media print{nav.toc{position:static}body{background:#fff}}
+</style>
+
+<div class="wrap">
+<header>
+<div class="kicker">Operation Design</div>
+<h1>公式LINE・Facebook・Googleの<br>運用設計</h1>
+<div class="meta">一般財団法人ディメンション・ゼロ様　2026年9月16日　アシログ　芝原 朋弥<br>仕様は2026年9月14日に各社の公式ヘルプで確認しました。画面の表示やボタンの名前は変わることがあります。</div>
+</header>
+
+<nav class="toc"><a href="#flow">全体の流れ</a><a href="#line">公式LINE</a><a href="#fb">Facebook・Instagram</a><a href="#gbp">Googleビジネスプロフィール</a><a href="#post">イベント・ブログの載せ方</a><a href="#ask">ご確認いただきたいこと</a></nav>
+
+<h2 id="flow"><small>00</small>全体の流れ</h2>
+<p class="lead">どこから入っても、最後は「お近くのサロン」か「財団へのご相談」にたどり着くようにつなぎます。</p>
+<div class="card">
+<p><b>知る。</b>Google検索・Googleマップ、Instagram、Facebook、YouTube、サロンさんからの紹介。</p>
+<p><b>確かめる。</b>ホームページ（製品・財団について・プロフィール・イベント）。</p>
+<p><b>つながる。</b>公式LINE。迷った方も、ここで受け止めます。</p>
+<p><b>行動する。</b>サロンに連絡して体験する／イベントに申し込む（Select Type）／サロン開業を相談する。</p>
+</div>
+<div class="note"><b>役割分担。</b>ホームページが「答え」を置く場所、公式LINEが「つながりを保つ」場所、SNSとGoogleが「見つけてもらう」場所です。SNSやGoogleの投稿には、必ずホームページか公式LINEへの入口を付けます。</div>
+
+<h2 id="line"><small>01</small>公式LINE</h2>
+
+<h3>リッチメニュー（トーク画面の下のメニュー）</h3>
+<p class="lead">6つに分けた大きいサイズです。いちばん押されやすい左上に「サロンを探す」を置きます。</p>
+<img class="rm" src="line/richmenu-2500x1686.jpg" alt="リッチメニューの画像案">
+<div class="scroll"><table>
+<tr><th>場所</th><th>表示</th><th>押したときの動き</th><th>ラベル（20文字まで）</th></tr>
+<tr><td>左上</td><td>サロンを探す</td><td>リンク：ホームページの「全国のサロン」</td><td>サロンを探す</td></tr>
+<tr><td>中上</td><td>イベント</td><td>リンク：ホームページの「イベント」</td><td>イベントの予定</td></tr>
+<tr><td>右上</td><td>製品を見る</td><td>リンク：ホームページの「製品」</td><td>製品を見る</td></tr>
+<tr><td>左下</td><td>サロンを開きたい方</td><td>リンク：ホームページの「提携サロン募集」</td><td>サロン開業のご相談</td></tr>
+<tr><td>中下</td><td>動画を見る</td><td>リンク：財団のYouTubeチャンネル</td><td>動画を見る</td></tr>
+<tr><td>右下</td><td>お問い合わせ</td><td>リンク：ホームページの「お問い合わせ」</td><td>お問い合わせ</td></tr>
+</table></div>
+<div class="note"><b>画像の決まり。</b>大きいサイズは 2500×1686px、JPGかPNGで1MB以下です。上の案は 311KB で作ってあります。メニューを変えたあと、見る側に反映されるまで少し時間がかかり、トーク画面を開き直すと反映されます。</div>
+
+<h3>あいさつメッセージ（友だち追加のとき）</h3>
+<p class="lead">吹き出しは5つまで、1つ500文字までです。<code>{Nickname}</code> と書いた所に、相手の名前が入ります。</p>
+<div class="msg">{Nickname}さん、友だち追加ありがとうございます。
+一般財団法人ディメンション・ゼロです。
+
+このアカウントでは、
+・お近くのディメンションサロンのご案内
+・オハナシ会などイベントの先行案内
+・はじめての方向けの短い読みもの
+をお届けします。
+
+お近くのサロンを知りたいときは、お住まいの都道府県名（例：福岡）を送ってください。</div>
+<div class="msg">下のメニューから、サロン・イベント・製品をご覧いただけます。
+ご質問は、このトークにそのまま送ってください。</div>
+
+<h3>都道府県名で、近いサロンを返す（応答メッセージ）</h3>
+<p class="lead">「福岡」と送ると、福岡のサロン一覧のページを返します。キーワードは完全一致なので、「福岡県」「ふくおか」も一緒に登録します。1つの応答に51個まで登録できます。</p>
+<div class="scroll"><table>
+<tr><th>応答</th><th>キーワード（例）</th><th>返す内容</th></tr>
+<tr><td>九州・沖縄</td><td>福岡／福岡県／ふくおか／佐賀／佐賀県／長崎／長崎県／熊本／熊本県／大分／大分県／宮崎／宮崎県／鹿児島／鹿児島県／沖縄／沖縄県 …</td><td>九州・沖縄のサロン一覧のリンク＋「くわしくは各サロンへ直接ご連絡ください」</td></tr>
+<tr><td>関東</td><td>東京／東京都／神奈川／神奈川県／埼玉／埼玉県／千葉／千葉県 …</td><td>関東のサロン一覧のリンク</td></tr>
+<tr><td>中部・関西</td><td>愛知／愛知県／大阪／大阪府／兵庫／兵庫県 …</td><td>中部・関西のサロン一覧のリンク</td></tr>
+<tr><td>中国・北海道</td><td>広島／広島県／岡山／岡山県／北海道 …</td><td>中国・北海道のサロン一覧のリンク</td></tr>
+<tr><td>サロンがない地域</td><td>青森／岩手／… 残りの都道府県</td><td>「いまお近くにサロンはありませんが、近い地域のサロンや、オンラインのオハナシ会をご案内します。担当から改めてご連絡します」</td></tr>
+</table></div>
+<div class="note"><b>設定の注意。</b>応答メッセージを使うには、応答設定を「チャット：オフ＋応答メッセージ：オン」か「チャット：オン」にしておきます。</div>
+
+<h3>ステップ配信（友だち追加から日を空けて自動で届く）</h3>
+<p class="lead">無料プランでも使えます。日数は1〜30日で決められます。</p>
+<div class="scroll"><table>
+<tr><th>いつ</th><th>内容</th><th>入口</th></tr>
+<tr><td>1日後</td><td>ディメンション・ゼロとは（鹿児島・垂水から始まったこと、財団はデバイスの作り手で、体験はサロンで、ということ）</td><td>財団について</td></tr>
+<tr><td>3日後</td><td>サロンで過ごす約35分（体験の流れ、予約はサロンへ直接）</td><td>サロンを探す</td></tr>
+<tr><td>7日後</td><td>開発者のこと、オハナシ会のこと、動画</td><td>イベント・YouTube</td></tr>
+</table></div>
+<div class="warn"><b>通数に気をつけてください。</b>ステップ配信も無料メッセージの通数に数えます。無料プランは月200通です。3回配信だと、月に67人以上友だちが増えると足りなくなります。友だちの増え方を見て、ライトプラン（月5,000円・5,000通）に切り替えるかを決めます。文章は、効果をうたわない書き方で私がご用意します。</div>
+
+<h3>配信の目安</h3>
+<div class="scroll"><table>
+<tr><th>配信</th><th>頻度</th><th>中身</th></tr>
+<tr><td>イベントのお知らせ</td><td>決まったとき＋1週間前</td><td>投稿画面の「告知をつくる」でできる文章と画像</td></tr>
+<tr><td>新しいサロンのオープン</td><td>オープンのとき</td><td>サロン名・地域・オープンイベント</td></tr>
+<tr><td>財団からのお便り</td><td>月1回まで</td><td>ブログの新しい記事、活動のご報告</td></tr>
+</table></div>
+
+<div class="note"><b>浅井様にお願いしたい作業は、別紙「公式LINEの構築で浅井様にお願いしたいこと」に手順をまとめています。</b> <a href="line-setup.html">別紙を開く</a></div>
+<h3>メンバーの追加（アシログが設定をお手伝いする場合）</h3>
+<ol class="steps">
+<li>LINE公式アカウントマネージャーで「設定」→「権限管理」→「メンバーを追加」</li>
+<li>権限は「運用担当者」を選び、URLを発行（24時間だけ有効・1人に1回）</li>
+<li>発行したURLを芝原に送っていただく → 芝原がログインして承認</li>
+</ol>
+<div class="note"><b>アカウントは御財団の名義のままです。</b>メンバーの追加や削除は「管理者」だけができるので、いつでも外せます。</div>
+
+<h2 id="fb"><small>02</small>Facebook・Instagram</h2>
+<p class="lead">お打ち合わせで、Facebookは同世代の方がよく見ているので活用したい、とうかがいました。財団のFacebookページはまだ見つからなかったので、作るところからの流れです。</p>
+
+<h3>1. Facebookページを作る（最初の1回）</h3>
+<ol class="steps">
+<li>浅井様の個人アカウントでログインし、左側の「ページ」→「ページを作成」</li>
+<li>「公開ページ」を選ぶ → ページ名「一般財団法人ディメンション・ゼロ」、カテゴリを入れる</li>
+<li>自己紹介を入れる（Googleビジネスプロフィールと同じ文章でかまいません）</li>
+<li>連絡先、プロフィール写真（ロゴ）、カバー写真（桜島や水面の写真）を入れる</li>
+<li>アクションボタンは「ウェブサイトへ」にして、ホームページのサロン一覧につなぐ</li>
+</ol>
+
+<h3>2. Instagramとつなぐ</h3>
+<ol class="steps">
+<li>Instagram（@dimensionzero.zero）をプロアカウントにしておく</li>
+<li>Facebookページの「設定とプライバシー」→「設定」→「リンク済みのアカウント」→「Instagram」→「アカウントをリンク」</li>
+</ol>
+<div class="note"><b>つなぐと何がいいか。</b>Meta Business Suite から、FacebookとInstagramにまとめて投稿でき、予約投稿もできます。予約は20分後から29日後まで入れられます。</div>
+
+<h3>3. ふだんの投稿のしかた</h3>
+<ol class="steps">
+<li>ホームページの投稿画面でイベントやブログを保存する</li>
+<li>「告知をつくる」で、Facebook用・Instagram用の文章と告知画像をコピー・保存する</li>
+<li>Meta Business Suite の「投稿を作成」で、FacebookとInstagramの両方を選び、文章と画像を貼る</li>
+<li>すぐ出すか、「日時を設定」で予約する</li>
+</ol>
+
+<h3>4. イベントをFacebookに載せる</h3>
+<p>ページの「イベント」→「新しいイベントを作成」→ 名前と日時、会場ありかオンラインかを選び、詳細に「告知をつくる」のFacebook用文章を貼ります。申込はSelect TypeのURLを載せます。</p>
+<div class="warn"><b>会場ありのイベントは、作ったあと公開範囲を変えられません。</b>作るときに「公開」になっているか確かめてください。</div>
+
+<h3>5. アシログに管理を任せる場合</h3>
+<p>ページの設定から、芝原に「部分的な権限」（コンテンツ、メッセージ、イベント、インサイト）をお渡しください。「全権限」は、ほかの人の追加や削除までできてしまうので、お渡しいただかなくて大丈夫です。</p>
+
+<h2 id="gbp"><small>03</small>Googleビジネスプロフィール</h2>
+<p class="lead">お打ち合わせのとおり「知ってもらう窓口」として作り、重きは置きません。Googleで財団の名前を調べた人に、正しい情報とホームページ・公式LINE・SNSの入口を見せるのが役目です。</p>
+
+<h3>設定の案</h3>
+<div class="scroll"><table>
+<tr><th>項目</th><th>案</th><th>決まり・注意</th></tr>
+<tr><td>ビジネス名</td><td>一般財団法人ディメンション・ゼロ</td><td>普段使っている名前だけ。「鹿児島」「周波数」などの言葉を足すのは禁止です</td></tr>
+<tr><td>住所の出し方</td><td><span class="q">要確認</span>　本部で来客を受けるなら住所を表示。受けないなら住所は非表示にして、地域だけ設定</td><td>店舗を持たない事業者は住所を隠すのが決まりです。地域は20か所まで、拠点から車で約2時間以内。バーチャルオフィスは登録できません</td></tr>
+<tr><td>カテゴリ</td><td><span class="q">要確認</span>　登録画面で「財団」「非営利団体」「製造業者」などを候補に、いちばん近いものを1つ</td><td>カテゴリ名はGoogleが一覧を出していないので、登録画面で選べるものから決めます。「何をしている団体か」で選びます</td></tr>
+<tr><td>ウェブサイト</td><td>新しいホームページのトップ</td><td>https:// から始まる形で</td></tr>
+<tr><td>SNS</td><td>Facebook、Instagram、YouTube</td><td>それぞれ1つずつ登録できます</td></tr>
+<tr><td>電話</td><td><span class="q">要確認</span>　財団の代表番号</td><td>携帯番号しかない場合はご相談ください</td></tr>
+<tr><td>営業時間</td><td>来客を受けない場合は入れない</td><td></td></tr>
+</table></div>
+
+<h3>説明文の案（375文字まで）</h3>
+<div class="msg" style="border-left-color:var(--gold)">一般財団法人ディメンション・ゼロは、鹿児島県垂水市から始まった、音と光の複合周波数を用いたオリジナルデバイス「ディメンションシリーズ」の作り手です。デバイスの体験とご案内は、全国40か所以上の販売店「ディメンションサロン」で行っています。財団本部では、サロン開業のご相談、サロン専用機ディメンション・プロの導入、講演やオハナシ会のご依頼を受け付けています。お近くのサロンは、ホームページからお探しいただけます。</div>
+<div class="note"><b>書かないこと。</b>URL、価格、セールの案内は説明文に入れられません。効果や効能をうたう書き方もしません。Googleには「誤解を与える効果効能をうたう商品」を禁止する決まりがあるので、「商品」の機能に製品を登録するのは見送ります。</div>
+
+<h3>オーナー確認</h3>
+<p>Googleが確認のしかたを自動で決めます（電話・SMS、メール、動画の撮影など）。動画の場合は、看板や事務所の中を、途中で切らずに1本スマホで撮ります。審査は最長で5営業日ほどです。はがきの場合はコードが30日で無効になるので、届いたらすぐ入力し、届くまでは名前・住所・カテゴリを変えないでください。</p>
+
+<h3>投稿</h3>
+<p>イベントが決まったら「イベント」の投稿を出します。タイトルと開始・終了の日時が必須です。文章は投稿画面の「告知をつくる」にあるGoogle用をそのまま使えます。投稿は公開から6か月たつと表に出なくなります。</p>
+
+<h3>アシログに管理を任せる場合</h3>
+<p>「ビジネス プロフィールの設定」→「ユーザーとアクセス権」から、芝原を「管理者」で招待してください。オーナーは御財団のままで、ユーザーの追加・削除はオーナーだけができます。</p>
+
+<h2 id="post"><small>04</small>イベント・ブログの載せ方</h2>
+<p class="lead">新しいホームページには、御財団で使っていただく「投稿画面」を付けます。構成サンプルで、実際に入力して試せます。</p>
+<div class="card">
+<p><b>イベントを載せる。</b>イベント名・日時・会場・参加費・定員・主催・申込ページのURL・写真・内容を入れて保存すると、イベント一覧とイベントの詳しいページができます。過去のイベントは自動で「これまでの活動記録」に移ります。</p>
+<p><b>ブログを書く。</b>タイトル・日付・書いた人・写真・本文を入れて保存すると、ブログに並びます。</p>
+<p><b>告知をつくる。</b>イベントを選ぶと、LINE・Instagram・Facebook・Googleビジネスプロフィールにそのまま貼れる文章と、Instagram用の正方形・ストーリーズ用の縦長の告知画像ができます。</p>
+<p><b>表現チェック。</b>入力している間に、効果や病気に触れる言葉に赤・黄の印が付き、言い換えの例が出ます。</p>
+</div>
+<div class="warn"><b>Select Type のプランについて。</b>無料プランは、7日先までのイベントしか予約を受け付けられません。来月のイベントの申込を今から受け付けるには、ベーシック（月1,650円・税込、30日先まで）以上が必要です。カード決済の手数料は、Select Type分とStripe分を合わせて、無料プランで5.6%です。</div>
+
+<h2 id="ask"><small>05</small>ご確認いただきたいこと</h2>
+<ol class="steps">
+<li><b>公式LINEの友だち数と、いまのプラン</b>　ステップ配信の通数に関わります</li>
+<li><b>Facebookページの有無</b>　ない場合は、作成を浅井様のアカウントで行っていただくか、一緒に画面を見ながら進めます</li>
+<li><b>財団本部で来客を受けるか、電話番号</b>　Googleビジネスプロフィールの住所の出し方が変わります</li>
+<li><b>Select Type のプラン</b>　来月のイベントの申込期間に関わります</li>
+<li><b>公式LINEでお届けする3つ</b>（サロンのご案内・読みもの3回・イベントの先行案内）を、このままお約束してよいか</li>
+</ol>
+
+<footer>アシログ　芝原 朋弥<br>〒810-0001　福岡県福岡市中央区天神2丁目2番12号 T&amp;Jビルディング7F</footer>
+</div>

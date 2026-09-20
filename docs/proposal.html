@@ -1,0 +1,278 @@
+<meta charset="utf-8">
+<meta name="robots" content="noindex,nofollow">
+<title>ご提案と料金｜ディメンション・ゼロ様</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Shippori+Mincho:wght@500;600&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap">
+<style>
+:root{--bg:#F7F5F2;--surface:#fff;--surface-2:#EFECE7;--fg:#0C0C0C;--mut:#615B54;--faint:#98918A;--line:#DAD5CE;--gold:#B89A6A;--gold-soft:rgba(184,154,106,.4);--sea:#1F5F8B;--sea-bg:#E6EFF5;--warn:#8C6A12;--warn-bg:#FBF3DD}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:"Zen Kaku Gothic New","Hiragino Sans",system-ui,sans-serif;font-size:15.5px;line-height:1.9;-webkit-font-smoothing:antialiased}
+.wrap{max-width:880px;margin:0 auto;padding:0 26px 90px}
+header{padding:56px 0 28px;border-bottom:1px solid var(--fg)}
+.kicker{font-family:"Cormorant Garamond",serif;font-style:italic;letter-spacing:.2em;color:var(--gold);font-size:14px;margin-bottom:6px}
+h1{font-family:"Shippori Mincho",serif;font-weight:500;font-size:30px;letter-spacing:.06em;margin:0 0 14px;line-height:1.5}
+.meta{display:grid;grid-template-columns:auto 1fr;gap:3px 18px;font-size:14px}
+.meta span{color:var(--faint);font-size:12.5px;letter-spacing:.1em}
+h2{font-family:"Shippori Mincho",serif;font-weight:500;font-size:21px;letter-spacing:.05em;margin:50px 0 6px;padding-bottom:8px;border-bottom:1px solid var(--gold-soft);display:flex;gap:12px;align-items:baseline}
+h2 small{font-family:"Cormorant Garamond",serif;font-style:italic;color:var(--gold);font-size:15px;letter-spacing:.14em}
+.lead{color:var(--mut);font-size:14px;margin:8px 0 18px}
+.card{background:var(--surface);border:1px solid var(--line);padding:20px 22px;margin:12px 0}
+.card h3{margin:0 0 8px;font-size:16px}
+.card p{margin:0 0 8px}.card p:last-child{margin:0}
+ol.steps{counter-reset:s;list-style:none;margin:12px 0;padding:0}
+ol.steps li{counter-increment:s;position:relative;padding:12px 0 12px 50px;border-bottom:1px solid var(--line)}
+ol.steps li::before{content:counter(s,decimal-leading-zero);position:absolute;left:0;top:12px;font-family:"Cormorant Garamond",serif;font-size:18px;color:var(--gold);letter-spacing:.06em}
+ol.steps b{display:block}
+ol.steps em{font-style:normal;color:var(--mut);font-size:14px}
+.plans{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:14px 0}
+@media(max-width:700px){.plans{grid-template-columns:1fr}}
+.plan{background:var(--surface);border:1px solid var(--line);padding:22px 22px 20px;position:relative}
+.plan.rec{border-color:var(--sea);box-shadow:0 0 0 1px var(--sea) inset}
+.plan .tag{position:absolute;top:-11px;left:18px;background:var(--sea);color:#fff;font-size:11.5px;letter-spacing:.12em;padding:3px 10px;border-radius:999px;font-weight:700}
+.plan h3{margin:0 0 4px;font-size:18px;font-family:"Shippori Mincho",serif;font-weight:500}
+.plan .sub{font-size:13.5px;color:var(--mut);margin-bottom:12px}
+.plan ul{margin:0 0 14px;padding-left:1.2em;font-size:14.5px}
+.plan li{margin:3px 0}
+.plan .price{border-top:1px solid var(--line);padding-top:12px;display:grid;grid-template-columns:1fr auto;gap:4px 12px;font-size:14px;align-items:baseline}
+.plan .price b{font-family:"Cormorant Garamond",serif;font-size:22px;font-weight:600;text-align:right;font-variant-numeric:tabular-nums}
+.plan .price s{color:var(--faint);text-align:right;font-variant-numeric:tabular-nums}
+.plan .price .cap{grid-column:1/-1;font-size:12.5px;color:var(--sea)}
+.tbl{overflow-x:auto;margin:12px 0}
+table{width:100%;border-collapse:collapse;font-size:14px;margin:12px 0}
+.tbl table{margin:0;min-width:640px}
+th,td{padding:9px 11px;border:1px solid var(--line);text-align:left;vertical-align:top}
+th{font-weight:500;color:var(--mut);font-size:12.5px;letter-spacing:.08em;background:var(--surface-2)}
+td.n{font-family:"Cormorant Garamond",serif;font-size:17px;font-weight:600;text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
+td.minus{color:var(--sea)}
+tr.total td{background:var(--sea-bg)}
+table.cmp th.ours,table.cmp td.ours{background:var(--sea-bg);border-color:#BCD2E2}
+table.cmp th.ours{color:var(--sea);font-weight:700}
+table.cmp td.ours{font-weight:700}
+.deal{display:grid;grid-template-columns:1fr 1fr 1.25fr;border:1px solid var(--line);background:var(--surface);margin:16px 0 6px}
+@media(max-width:700px){.deal{grid-template-columns:1fr}}
+.deal>div{padding:16px 18px;display:flex;flex-direction:column;gap:2px;border-right:1px solid var(--line)}
+.deal>div:last-child{border-right:0}
+@media(max-width:700px){.deal>div{border-right:0;border-bottom:1px solid var(--line)}.deal>div:last-child{border-bottom:0}}
+.deal span{font-size:12.5px;color:var(--mut);letter-spacing:.06em}
+.deal b{font-family:"Cormorant Garamond","Shippori Mincho",serif;font-size:30px;font-weight:600;line-height:1.3;font-variant-numeric:tabular-nums}
+.deal s{font-family:"Cormorant Garamond","Shippori Mincho",serif;font-size:26px;color:var(--faint);line-height:1.3}
+.deal small{font-size:12px;color:var(--faint);line-height:1.6}
+.deal .ours{background:var(--sea);color:#fff}
+.deal .ours span,.deal .ours small{color:rgba(255,255,255,.85)}
+.deal .ours b{font-size:38px}
+.src{font-size:12px;color:var(--faint);line-height:1.7;margin:8px 0 0}
+.src a{color:var(--faint)}
+.note{background:var(--surface-2);border-left:3px solid var(--gold);padding:12px 16px;font-size:14px;color:var(--mut);margin:14px 0}
+.note b{color:var(--fg)}
+.draft{background:var(--warn-bg);border:1px dashed var(--warn);color:var(--warn);padding:12px 16px;font-size:13.5px;margin:0 0 20px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:700px){.two{grid-template-columns:1fr}}
+.two ul{margin:6px 0 0;padding-left:1.2em;font-size:14.5px}
+.why{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:14px 0}
+@media(max-width:700px){.why{grid-template-columns:1fr}}
+.why .card{margin:0}
+.why .card h3{font-family:"Shippori Mincho",serif;font-weight:500;font-size:17px}
+.why .card h3 i{font-family:"Cormorant Garamond",serif;font-style:italic;color:var(--gold);margin-right:8px}
+.why .card p{font-size:14.5px}
+footer{margin-top:56px;padding-top:18px;border-top:1px solid var(--line);font-size:12.5px;color:var(--faint);text-align:center}
+@media print{.draft{display:none}body{background:#fff}.tbl table{min-width:0}
+.plan,.card,.note,.deal,.why .card,ol.steps li,tr,.two{break-inside:avoid}
+h2{break-after:avoid}
+.deal b{font-size:24px}.deal .ours b{font-size:30px}.deal s{font-size:22px}}
+</style>
+
+<div class="wrap">
+<header>
+<div class="kicker">Proposal &amp; Pricing</div>
+<h1>ホームページと導線づくりの<br>ご提案と料金</h1>
+<div class="meta">
+<span>宛先</span><div>一般財団法人ディメンション・ゼロ　代表理事 浅井 理恵子 様</div>
+<span>日付</span><div>2026年9月16日</div>
+<span>差出</span><div>アシログ　芝原 朋弥</div>
+</div>
+</header>
+
+<h2><small>01</small>打ち合わせで決まったこと</h2>
+<p class="lead">2026年9月13日のお打ち合わせの内容を、こちらの理解で整理しました。違っている点があればお知らせください。</p>
+<div class="card">
+<p><b>目的。</b>財団は家庭用デバイスの製造元で、お客様への販売とご案内はサロンが担う。ホームページの役割は「製品を知った方を、お近くのサロンへ迷わず届けること」と「サロンを開きたい方に、財団のことを伝えること」の2つ。</p>
+<p><b>やること。</b>①ホームページを今風に作り変える（Wixを土台にしない）②公式LINE・Facebook・Instagram・YouTubeへ迷わず飛べる導線にする ③公式LINEのリッチメニューと配信の整理 ④Googleビジネスプロフィールを窓口として用意（重きは置かない）⑤効果を断定する表現の見直し ⑥イベントの申込・決済（Select Type）を、サイトと公式LINEからまとめて受けられるようにする。</p>
+<p><b>進め方。</b>外枠のサンプルを先に作り、プロフィール・製品・サロン紹介は現在の文章をそのまま移す。文章や見せ方は、御財団から随時いただいて更新していく。新サイトが完成してから切り替え、そのあとでWixを解約。</p>
+</div>
+
+<h2><small>02</small>進め方</h2>
+<ol class="steps">
+<li><b>外枠サンプルのご確認</b><em>サンプルサイト（https://tomohbr.github.io/dimension-zero-sample/）を見ていただき、構成と雰囲気の方向を決めます。</em></li>
+<li><b>ご契約・着手</b><em>作業範囲を書面で確認してから着手します。着手金のご入金後に制作開始です。</em></li>
+<li><b>現在の内容を移す（約2週）</b><em>プロフィール・製品・全国のサロン紹介・イベント・活動記録を、新しい形に移します。表現の見直し箇所は赤字でご相談します。</em></li>
+<li><b>文章と写真を整える（約2〜3週）</b><em>ヒーロー部分、財団の紹介、提携サロン募集のページは、御財団の言葉をうかがいながら書きます。</em></li>
+<li><b>公式LINE・Google・SNS導線（並行）</b><em>リッチメニューの作り直し、友だち追加ボタン、Googleビジネスプロフィール、SNSボタンの設置。</em></li>
+<li><b>公開・切り替え（約1週）</b><em>ドメイン（dimension-zero.org）を新サイトに向け、動作確認のうえ公開。その後にWixを解約いただきます。</em></li>
+</ol>
+<div class="note"><b>期間の目安は、ご契約から約6〜7週間。</b>御財団からの文章・写真のご提供を待つ時間で前後します。</div>
+
+<h2><small>03</small>2つのご提案</h2>
+<p class="lead">お打ち合わせで合意した「作り変える」案（案B）を軸にご提案します。比較のために「今のサイトを整える」案も並べます。</p>
+<div class="plans">
+<div class="plan">
+<h3>案A　今のWixサイトを整える</h3>
+<div class="sub">作り変えずに、導線と表現だけ直す</div>
+<ul>
+<li>表現の見直し一覧（お送り済み）に沿った修正のご案内</li>
+<li>LINEボタンの修正、SNSボタンの設置（Wix上での作業は御財団）</li>
+<li>公式LINEのリッチメニュー作り直し・あいさつメッセージ・自動応答</li>
+<li>Googleビジネスプロフィールの作成</li>
+</ul>
+<div class="price"><span>初期費用</span><b>¥40,000</b><span>月額サポート（Basic）</span><b>¥12,000</b></div>
+</div>
+<div class="plan rec">
+<span class="tag">おすすめ</span>
+<h3>案B　新しいホームページに作り変える</h3>
+<div class="sub">打ち合わせで合意した内容。今風で、全世代に読みやすく</div>
+<ul>
+<li>新サイト18ページの設計・デザイン・制作（トップ、財団について、プロフィール、製品一覧と製品6ページ、全国のサロン検索、イベント一覧と詳細、ブログ一覧と記事、お客様の声、提携サロン募集、お問い合わせ）</li>
+<li>現在の文章・写真・ブログ・イベントの移し替え、表現の見直し反映</li>
+<li>スマホ対応、検索対策の基本設定、アクセス解析</li>
+<li>ドメイン切り替えと公開作業、操作説明</li>
+<li>公式LINEのリッチメニュー作り直し・友だち追加ボタン・あいさつ・地域キーワードの自動応答</li>
+<li>Googleビジネスプロフィールの作成</li>
+<li>Facebook・Instagram・YouTubeへのボタン、Facebookページの作成（まだない場合）</li>
+<li>イベントの申込・決済（Select Type）ページの整備と、サイト・公式LINEからの申込ボタン</li>
+<li>新製品2つのページ追加（費用はいただきません）</li>
+<li>イベント・ブログの投稿画面（アシログからのご提案・費用に含みます）</li>
+</ul>
+<div class="price"><span>初期費用（通常）</span><s>¥349,000</s><span>初期費用（モニター価格）</span><b>¥169,500</b><span>月額サポート（Standard）</span><b>¥25,000</b><span class="cap">モニター価格は Standard を12か月ご契約いただく場合です（条件は06）</span></div>
+</div>
+</div>
+
+<h2><small>04</small>相場と比べて</h2>
+<p class="lead">同じ内容を制作会社や個人に頼んだ場合の目安と、アシログの通常価格を並べました。数字は、2026年9月時点で公開されている料金表・調査・出品価格をもとに当方で整理した目安で、内容や範囲によって大きく変わります。</p>
+<div class="deal">
+<div><span>制作会社にリニューアルを頼んだ場合</span><b>151〜300万円</b><small>企業サイトのリニューアル調査で最も多い価格帯</small></div>
+<div><span>アシログの通常価格</span><s>¥349,000</s><small>18ページ＋公式LINE＋Google＋イベント決済＋Facebook</small></div>
+<div class="ours"><span>今回のモニター価格</span><b>¥169,500</b><small>18ページ＋公式LINE＋Google＋イベント決済＋Facebook。1ページあたり約9,400円</small></div>
+</div>
+<div class="tbl"><table class="cmp">
+<tr><th>内容</th><th>制作会社</th><th>個人（ココナラなど）</th><th class="ours">アシログ（通常価格）</th></tr>
+<tr><td>ホームページ（5ページ程度）</td><td>40〜70万円</td><td>10〜30万円<br>出品の目安 15万円</td><td class="ours">11万円<br><small>1ページ目5万円＋追加1.5万円／ページ</small></td></tr>
+<tr><td>サイトのリニューアル</td><td>151〜300万円が最多<br><small>企業サイトのリニューアル調査</small></td><td>規模の目安なし</td><td class="ours">今回の内容一式<br><s style="font-weight:400;color:var(--faint)">通常 ¥349,000</s><br>モニター価格 ¥169,500</td></tr>
+<tr><td>1ページあたりの制作費</td><td>3.2〜10万円<br><small>下層ページのデザイン2〜7万円＋コーディング1.2〜3万円</small></td><td>目安なし</td><td class="ours">約9,400円<br><small>モニター価格÷18ページ（LINE・Google・決済・Facebookの設定込み）</small></td></tr>
+<tr><td>公式LINEの初期構築</td><td>3〜10万円<br><small>ステップ配信まで含むと30万円〜</small></td><td>出品の目安 2〜2.7万円</td><td class="ours">2.5万円</td></tr>
+<tr><td>Googleビジネスプロフィールの整備</td><td>数千円〜3万円</td><td>出品の目安 2.4万円</td><td class="ours">1.5万円</td></tr>
+<tr><td>サイトの保守（月額）</td><td>月5千〜2万円<br><small>発注者の実額は月1〜2万円が最多</small></td><td>出品の目安 月1万円</td><td class="ours">Basic 月1.2万円</td></tr>
+<tr><td>LINE・SNS・Googleの運用（月額）</td><td>月10万円まで（投稿代行中心）</td><td>出品の目安 月3.5万円</td><td class="ours">Standard 月2.5万円<br><small>保守込み</small></td></tr>
+</table></div>
+<p class="src">出典：エックスサーバー ビジネス「フリーランスのホームページ制作費用」（2026年4月）／株式会社ハイファクトリ 発注者調査（2026年2月調査）／ferret One「Webサイトリニューアルの費用」（2025年調査）／SPIRE「LINE公式アカウント運用代行の費用」（2026年4月）／Lflow「Lステップ構築の相場」（2026年9月）／まだないWeb「Googleビジネスプロフィール代行の費用」（2026年8月）／fungry「ホームページ管理費用」／ココナラ 各カテゴリの出品価格（2026年9月、当方で上位の出品を集計）</p>
+
+<h2><small>05</small>アシログにまとめてお任せいただく理由</h2>
+<p class="lead">ホームページ、公式LINE、Googleマップ、SNS、アクセス解析を別々の会社に頼むと、つなぎ目の調整は御財団のお仕事になります。アシログは、そのつなぎ目ごと一人でお引き受けします。</p>
+<div class="why">
+<div class="card"><h3><i>01</i>窓口がひとつ</h3><p>サイト・公式LINE・Googleビジネスプロフィール・SNSボタンを同じ担当が設計します。「LINEのボタンはどこへ飛ぶか」「サロン検索からどこへ進むか」を、全部つながった一本の道として作ります。</p></div>
+<div class="card"><h3><i>02</i>数字で見える</h3><p>アクセス解析で、どのページから公式LINEやサロン検索に進んだかを計測します。Standardでは毎月のレポートで、次に何を直すかを数字と一緒にご相談します。</p></div>
+<div class="card"><h3><i>03</i>表現の確認から始める</h3><p>効果を断定する表現の見直し（赤10・黄16）を、ご契約前にお送りしました。新しいサイトでも、同じ目で表現を確認しながら作ります。</p></div>
+<div class="card"><h3><i>04</i>仕組みそのものも作れる</h3><p>アプリを自社で開発・運営しているので、既製のサービスで足りないところは専用の仕組みを作れます。ご依頼の内容を仕上げたうえで、公開後の運用まで考えた一手先をご提案します。今回の投稿画面（06）もその一つです。</p></div>
+</div>
+
+<h2><small>06</small>料金の内訳（案B）</h2>
+<table>
+<tr><th>項目</th><th>内容</th><th style="text-align:right">金額</th></tr>
+<tr><td>トップページ</td><td>1ページ目。設計・デザインの型づくり、アクセス解析・検索の基本設定、公開作業を含む</td><td class="n">¥50,000</td></tr>
+<tr><td>新しく作るページ（11ページ）</td><td>財団について、プロフィール、製品一覧、全国のサロン検索、イベント一覧、イベント詳細、ブログ一覧、ブログ記事、お客様の声、提携サロン募集、お問い合わせ（1ページ ¥15,000）</td><td class="n">¥165,000</td></tr>
+<tr><td>同じ型のページ（6ページ）</td><td>製品ごとのページ（1ページ ¥5,000）</td><td class="n">¥30,000</td></tr>
+<tr><td>ブログ・イベントの移し替え</td><td>現在のWixサイトのブログ・イベント告知を新しい形に移す（作業 約6時間）</td><td class="n">¥36,000</td></tr>
+<tr><td>公式LINE 初期構築</td><td>リッチメニューのデザインと設定、友だち追加ボタン、あいさつメッセージ、地域キーワードの自動応答</td><td class="n">¥25,000</td></tr>
+<tr><td>Googleビジネスプロフィール</td><td>財団本部の登録・オーナー確認・基本情報とリンクの整備</td><td class="n">¥15,000</td></tr>
+<tr><td>Facebookページ・SNSボタン</td><td>Facebookページの作成（まだない場合）と基本情報の整備、サイトから Facebook・Instagram・YouTube へのボタン</td><td class="n">¥10,000</td></tr>
+<tr><td>イベントの申込・決済</td><td>Select Type の申込・決済ページの整備と、イベントページ・公式LINEからの申込ボタン（作業 約3時間）</td><td class="n">¥18,000</td></tr>
+<tr><td colspan="2">通常価格 合計</td><td class="n">¥349,000</td></tr>
+<tr><td>モニター割引</td><td>初期費用の50%（条件は下記）</td><td class="n minus">−¥174,500</td></tr>
+<tr><td>ご紹介特典</td><td>藤山様からのご紹介</td><td class="n minus">−¥5,000</td></tr>
+<tr class="total"><td colspan="2"><b>初期費用 合計</b>　着手時 ¥84,750／公開時 ¥84,750</td><td class="n">¥169,500</td></tr>
+</table>
+<div class="note"><b>モニター価格の条件。</b>①月額サポート Standard を、公開月から12か月ご契約いただくこと ②制作物を当方の制作実績として紹介させていただくこと（公表を望まれない部分は除きます）。<br>モニター価格は、12か月ご一緒することを前提にした価格です。万一12か月より前に解約される場合は、割引した分（¥174,500）を最後のご請求に合わせてお支払いいただきます。</div>
+
+<table>
+<tr><th style="width:24%">費用に含めて行うもの</th><th>内容</th><th style="width:11%;text-align:right;white-space:nowrap">お見積り</th></tr>
+<tr><td>新製品のページ</td><td>お打ち合わせでお話のあった新製品（ディメンションインフィニット、ディメンションフォレスポレスト）のページを、製品ページに追加します。事前にお話をいただいていたので、費用はいただきません。原稿と写真がそろい次第、公開後でも追加します。</td><td class="n">¥0</td></tr>
+<tr><td>イベント・ブログの投稿画面</td><td>御財団で入力するとサイトに載り、公式LINE・Instagram・Facebook・Google用の告知文と告知画像も自動でできる専用の画面です（表現の確認つき）。ご依頼の内容を仕上げることを前提に、公開後の運用まで考えてこちらからご提案するもので、通常 ¥90,000 のところ、今回の費用の中で行います。サイトの公開後、運用を始めるタイミングで仕上げ、保守は月額サポートの中で行います。</td><td class="n">¥0</td></tr>
+</table>
+<div class="note"><b>投稿画面について。</b>長くお付き合いする中で、御財団が運用しやすい形を考えたご提案です。不要でしたら遠慮なくお知らせください。取り下げます。</div>
+
+<table>
+<tr><th>月額サポート</th><th>内容</th><th style="text-align:right">金額</th></tr>
+<tr><td>Basic</td><td>サイト・公式LINEの保守、内容の変更 月3件まで（サロンの追加・イベント掲載を含む）、LINEでのご質問は回数制限なし</td><td class="n">¥12,000／月</td></tr>
+<tr><td>Standard（おすすめ）</td><td>Basicの内容に加えて、内容の変更は月5件まで、公式LINEの配信作成 月2本、Googleビジネスプロフィールへの投稿 月2回、月次レポート（アクセス解析と公式LINEの数字）</td><td class="n">¥25,000／月</td></tr>
+</table>
+<div class="note"><b>お支払い。</b>初期費用は着手時と公開時に半額ずつ。月額サポートは公開月から。12か月分をまとめてお支払いの場合は11か月分（Standardなら ¥275,000）です。月額の範囲を超える作業は、1時間 ¥6,000 で事前にお見積りしてから行います。</div>
+
+<table>
+<tr><th>あとから追加できるもの</th><th>内容</th><th style="text-align:right">金額</th></tr>
+<tr><td>ステップ配信の設計</td><td>友だち追加のあとに順番に届くメッセージの設計と設定</td><td class="n">¥35,000</td></tr>
+</table>
+<div class="note"><b>今回の料金に含まれないもの。</b>写真撮影・動画編集、広告費、Select Type などの外部サービス利用料、各サロン専用ページの新規制作（現在の文章の移し替えは含みます）、公開前の修正3回目以降、法令適合の最終判断。</div>
+
+<h2><small>07</small>作業範囲の確認</h2>
+<div class="two">
+<div class="card"><h3>含むもの（今回の初期費用で行います）</h3><ul>
+<li>新サイト18ページの企画・デザイン・制作・公開</li>
+<li>現在のサイトの文章・写真・サロン情報・ブログ・イベントの移し替え</li>
+<li>表現の見直し箇所の赤字提示と、言い換え案</li>
+<li>公式LINEのリッチメニュー（画像制作込み）・あいさつ・自動応答</li>
+<li>Facebook・Instagram・YouTubeへのボタン、Facebookページの作成（まだない場合）</li>
+<li>イベントの申込・決済（Select Type）ページの整備と、サイト・公式LINEからの申込ボタン</li>
+<li>Googleビジネスプロフィール（本部1件）</li>
+<li>新製品2つのページ追加（原稿と写真がそろい次第）</li>
+<li>イベント・ブログの投稿画面（公開後、運用を始めるタイミングで）</li>
+<li>公開前の修正2回まで</li>
+<li>公開後の操作説明と簡易マニュアル（LINE・Facebook・Googleの運用設計書つき）</li>
+</ul></div>
+<div class="card"><h3>含まないもの</h3>
+<p style="margin:12px 0 0;font-size:13px;font-weight:700;color:var(--mut)">別料金で追加できるもの</p><ul>
+<li>ステップ配信の設計（06「あとから追加できるもの」）</li>
+<li>撮影・動画編集・広告出稿</li>
+</ul>
+<p style="margin:12px 0 0;font-size:13px;font-weight:700;color:var(--mut)">サロンさんとの個別のご契約になるもの</p><ul>
+<li>各サロンのGoogle登録やサイト制作（08をご覧ください）</li>
+</ul>
+<p style="margin:12px 0 0;font-size:13px;font-weight:700;color:var(--mut)">御財団でお願いするもの</p><ul>
+<li>Select Type・Stripe のご契約とプランの選択、決済の申請（画面共有でご案内します）</li>
+<li>Wixのご契約の継続と、切り替え後の解約</li>
+</ul>
+<p style="margin:12px 0 0;font-size:13px;font-weight:700;color:var(--mut)">お引き受けしないもの</p><ul>
+<li>Wixサイトの改修</li>
+<li>効果・効能を断定する表現の原稿作成</li>
+</ul></div>
+</div>
+<div class="note"><b>原稿の取り扱い。</b>原稿は、体験された方の体感と、開発の背景、サロンオーナーの言葉を軸に構成します。医療機器としての効果・効能を断定する表現は使用しません。掲載内容の最終確認と法令適合の判断は、御財団にてお願いいたします。</div>
+
+<h2 style="break-before:page"><small>08</small>サロンさんとのこれから（ご相談）</h2>
+<p class="lead">ここからは、今回のご提案とは別のご相談です。</p>
+<div class="card">
+<p><b>こちらの理解。</b>財団は製造卸のメーカーとして、各サロンさんを通してデバイスをお届けしている。サロンさんで体験されるお客様が増えるほど、サロンさんでのデバイスの販売が増え、財団の卸も増えていく――という形だと理解しています。違っていたら教えてください。</p>
+<p><b>お手伝いできること。</b>そうであれば、本部のサイトを整えるだけでなく、各サロンさんの「見つけてもらう・予約してもらう」ところもお手伝いできると、サロンさんにも財団にも良い形になると考えています。本部サイトと同じデザインの型や表現の確認の仕組みをそのまま使えるので、サロンさん向けは作業が少なくて済み、その分をお値引きできます。</p>
+<p><b>正直なお願い。</b>アシログとしても、サロンさんをご紹介いただけるととても嬉しいです。無理にお願いするものではありませんので、ホームページや公式LINEでお困りのサロンさんがいらっしゃったときに、お声がけいただければ十分です。</p>
+</div>
+<div class="tbl"><table>
+<tr><th>提携サロンさん向け</th><th>内容</th><th style="text-align:right">通常</th><th style="text-align:right">財団からのご紹介</th></tr>
+<tr><td>サロンのホームページ＋公式LINE＋Google</td><td>本部サイトと同じデザインの型を使ったサロン専用ページ（1ページ）、公式LINEのリッチメニューとあいさつ、Googleビジネスプロフィールの整備。表現の確認つき</td><td class="n">¥80,000</td><td class="n">¥60,000</td></tr>
+<tr><td>月額 Basic</td><td>ページ・公式LINEの保守、内容の変更 月3件まで、LINEでのご質問</td><td class="n">¥12,000／月</td><td class="n">¥10,000／月</td></tr>
+<tr><td>月額 Standard</td><td>Basicに加えて、変更 月5件まで、公式LINEの配信作成 月2本、Google投稿 月2回、月次レポート</td><td class="n">¥25,000／月</td><td class="n">¥22,000／月</td></tr>
+</table></div>
+<div class="note"><b>財団へのお礼。</b>ご紹介いただいたサロンさんがご契約された場合は、1件ごとに財団の月額サポートから ¥10,000 を差し引きます（その月に引ききれない分は翌月以降に回します）。</div>
+
+<h2><small>09</small>ご確認いただきたいこと</h2>
+<ol class="steps">
+<li><b>ドメインの管理</b><em>dimension-zero.org をWixで取得されたか、別の会社で取得されたか。Wix解約の前にドメインの移管か設定変更が必要になるため、Wixの契約内容（ドメイン込みか）もあわせてお知らせください。</em></li>
+<li><b>Facebookページ</b><em>財団のFacebookページがまだないようでしたら、作成からお手伝いします。YouTubeは財団名義のチャンネルを確認できましたので、そちらへつなぎます。</em></li>
+<li><b>公式LINEの友だち数と、Select Typeのプラン</b><em>ステップ配信の通数と、イベントの申込受付期間（無料プランは7日先までしか受け付けられません）に関わります。</em></li>
+<li><b>提携サロン募集のページ</b><em>「サロンを開くと収入が得られる」という書き方をする場合、特定商取引法の表示が必要になることがあります。募集ページの書き方を一度ご相談させてください。</em></li>
+</ol>
+
+<h2><small>10</small>次のステップ</h2>
+<div class="card">
+<p>資料とサンプルをご覧いただいたあとに、10分ほどオンラインでお話しできませんか。どちらの案にされるかと、ご確認事項をその場でうかがいます。ご都合のよい日時をLINEでお知らせください。ご契約が決まれば、翌週から着手できます。</p>
+</div>
+
+<footer>アシログ　芝原 朋弥<br>〒810-0001　福岡県福岡市中央区天神2丁目2番12号 T&amp;Jビルディング7F</footer>
+</div>

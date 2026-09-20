@@ -1,0 +1,136 @@
+<meta charset="utf-8">
+<meta name="robots" content="noindex,nofollow">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>公式LINEの構築 お願いしたいこと｜ディメンション・ゼロ様</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;1,500&family=Shippori+Mincho:wght@500;600&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap">
+<style>
+:root{--bg:#F7F5F2;--surface:#fff;--surface-2:#EFECE7;--fg:#0C0C0C;--mut:#5E574E;--faint:#98918A;--line:#DAD5CE;--gold:#B89A6A;--gold-soft:rgba(184,154,106,.4);--green:#06C755;--green-bg:#E6F7EC;--warn:#8C6A12;--warn-bg:#FBF3DD;--sea:#1F5F8B;--sea-bg:#E6EFF5}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:"Zen Kaku Gothic New","Hiragino Sans",system-ui,sans-serif;font-size:16.5px;line-height:1.9;-webkit-font-smoothing:antialiased}
+.wrap{max-width:900px;margin:0 auto;padding:0 26px 90px}
+header{padding:56px 0 24px;border-bottom:1px solid var(--fg)}
+.kicker{font-family:"Cormorant Garamond",serif;font-style:italic;letter-spacing:.2em;color:var(--gold);font-size:14px;margin-bottom:6px}
+h1{font-family:"Shippori Mincho",serif;font-weight:500;font-size:31px;letter-spacing:.05em;margin:0 0 12px;line-height:1.5}
+.meta{font-size:14px;color:var(--mut)}
+h2{font-family:"Shippori Mincho",serif;font-weight:500;font-size:24px;letter-spacing:.04em;margin:56px 0 6px;padding-bottom:10px;border-bottom:1px solid var(--gold-soft);display:flex;gap:14px;align-items:baseline}
+h2 small{font-family:"Cormorant Garamond",serif;font-style:italic;color:var(--gold);font-size:16px;letter-spacing:.14em}
+h2 .who{margin-left:auto;font-family:"Zen Kaku Gothic New",sans-serif;font-size:13px;font-weight:700;padding:3px 12px;border-radius:999px;background:var(--green-bg);color:#067A36;letter-spacing:.04em}
+h2 .who.me{background:var(--sea-bg);color:var(--sea)}
+h2 .who.both{background:var(--warn-bg);color:var(--warn)}
+.lead{color:var(--mut);font-size:15.5px;margin:8px 0 18px}
+.sum{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:26px 0 8px}
+@media(max-width:720px){.sum{grid-template-columns:1fr}}
+.sum div{background:#fff;border:1px solid var(--line);border-radius:14px;padding:16px 18px}
+.sum b{display:block;font-size:14px;color:var(--mut);font-weight:500}
+.sum strong{display:block;font-family:"Shippori Mincho",serif;font-size:22px;font-weight:600;margin:2px 0}
+.sum span{font-size:14px;color:var(--mut)}
+ol.steps{counter-reset:s;list-style:none;margin:12px 0;padding:0}
+ol.steps li{counter-increment:s;position:relative;padding:14px 0 14px 54px;border-bottom:1px solid var(--line)}
+ol.steps li::before{content:counter(s);position:absolute;left:0;top:13px;width:36px;height:36px;border-radius:50%;background:var(--green);color:#fff;font-weight:700;display:grid;place-items:center;font-size:16px}
+ol.steps b{display:block;font-size:17px}
+ol.steps em{font-style:normal;color:var(--mut);font-size:15px;display:block}
+.path{display:inline-block;font-weight:700;background:var(--surface-2);border-radius:6px;padding:1px 8px;margin:2px 0}
+table{width:100%;border-collapse:collapse;font-size:15px;margin:12px 0;background:#fff}
+th,td{padding:11px 12px;border:1px solid var(--line);text-align:left;vertical-align:top}
+th{font-weight:500;color:var(--mut);font-size:13.5px;letter-spacing:.06em;background:var(--surface-2)}
+.scroll{overflow-x:auto}.scroll table{min-width:620px}
+.note{background:var(--surface-2);border-left:3px solid var(--gold);padding:12px 16px;font-size:15px;color:var(--mut);margin:14px 0;border-radius:0 8px 8px 0}
+.note b{color:var(--fg)}
+.warn{background:var(--warn-bg);border-left:3px solid var(--warn);padding:12px 16px;font-size:15px;margin:14px 0;border-radius:0 8px 8px 0}
+.warn b{color:var(--warn)}
+.check{list-style:none;margin:10px 0;padding:0}
+.check li{position:relative;padding:10px 0 10px 36px;border-bottom:1px solid var(--line)}
+.check li::before{content:"";position:absolute;left:2px;top:15px;width:20px;height:20px;border:2px solid var(--line);border-radius:5px;background:#fff}
+.check small{display:block;color:var(--mut);font-size:14px}
+.msg{white-space:pre-wrap;font-size:15px;background:#fff;border:1px solid var(--line);border-left:4px solid var(--green);border-radius:8px;padding:14px 16px;margin:10px 0}
+footer{margin-top:60px;padding-top:18px;border-top:1px solid var(--line);font-size:12.5px;color:var(--faint);text-align:center}
+</style>
+
+<div class="wrap">
+<header>
+<div class="kicker">LINE Setup</div>
+<h1>公式LINEの構築で<br>浅井様にお願いしたいこと</h1>
+<div class="meta">一般財団法人ディメンション・ゼロ様　アシログ　芝原 朋弥<br>操作は2026年9月時点の LINE公式アカウントマネージャーの画面です。ボタンの名前は変わることがあります。</div>
+</header>
+
+<div class="sum">
+<div><b>浅井様の作業</b><strong>合計 約15分</strong><span>確認5分・芝原の追加3分・テスト5分</span></div>
+<div><b>一緒に決めること</b><strong>打ち合わせ 20分</strong><span>画面共有で、案を見ながら</span></div>
+<div><b>芝原の作業</b><strong>2〜3日</strong><span>メニュー・あいさつ・応答・配信の設定</span></div>
+</div>
+
+<div class="note"><b>アカウントは御財団の名義のままです。</b>芝原は「運用担当者」として入るだけなので、メンバーの追加・削除や、アカウントそのものの管理はできません。終わったあと、いつでも外していただけます。</div>
+
+<h2><small>STEP 1</small>今の状態を確かめる<span class="who">浅井様・5分</span></h2>
+<p class="lead">パソコンかスマホで「LINE公式アカウントマネージャー」を開き、次の5つを見てメモしてください。わからない所は空欄で大丈夫です。</p>
+<ul class="check">
+<li><b>ログインできるか</b><small>いつもログインに使っているLINEアカウント、またはメールアドレスで入れるか</small></li>
+<li><b>浅井様の権限が「管理者」か</b><small><span class="path">設定</span> → <span class="path">権限管理</span> の一覧で、浅井様の名前の横に「管理者」と出ているか。管理者でないと、芝原を追加できません</small></li>
+<li><b>友だちの人数</b><small>ホーム画面の上に出ている数字</small></li>
+<li><b>今の料金プラン</b><small>無料（コミュニケーションプラン）か、ライト・スタンダードか</small></li>
+<li><b>今使っている機能</b><small>リッチメニュー（トーク画面の下のメニュー）、あいさつメッセージ、自動の応答、それぞれ使っているか</small></li>
+</ul>
+
+<h2><small>STEP 2</small>芝原をメンバーに追加する<span class="who">浅井様・3分</span></h2>
+<p class="lead">設定を代わりに行うための手続きです。発行したURLは24時間で使えなくなるので、発行したらすぐ芝原に送ってください。</p>
+<ol class="steps">
+<li><b>設定を開く</b><em>画面の右上の <span class="path">設定</span></em></li>
+<li><b>権限管理を開く</b><em>左のメニューの <span class="path">権限管理</span></em></li>
+<li><b>メンバーを追加する</b><em><span class="path">メンバーを追加</span> を押す</em></li>
+<li><b>権限は「運用担当者」を選ぶ</b><em>「管理者」ではなく「運用担当者」です。これでメニューやメッセージの設定ができます</em></li>
+<li><b>URLを発行して、芝原にLINEで送る</b><em><span class="path">URLを発行</span> → 出てきたURLをコピーして、芝原とのトークに貼って送信。このURLは24時間だけ有効で、1人しか使えません</em></li>
+<li><b>芝原が承認して完了</b><em>芝原がURLを開いて承認すると、権限管理の一覧に「芝原」が出ます</em></li>
+</ol>
+<div class="note"><b>あとで外すとき。</b><span class="path">設定</span> → <span class="path">権限管理</span> で芝原の行から削除できます。</div>
+
+<h2><small>STEP 3</small>中身を一緒に決める<span class="who both">打ち合わせ・20分</span></h2>
+<p class="lead">芝原が案を画面でお見せします。浅井様には、次の7つを「このままでよい／ここを変えたい」で決めていただきます。</p>
+<div class="scroll"><table>
+<tr><th>決めること</th><th>芝原の案</th><th>浅井様に決めていただくこと</th></tr>
+<tr><td>リッチメニュー</td><td>6つ：サロンを探す／イベント／製品を見る／サロンを開きたい方／動画を見る／お問い合わせ</td><td>並び順と言葉。写真を差し替えたい所があるか</td></tr>
+<tr><td>あいさつメッセージ</td><td>友だち追加のお礼と、「都道府県名を送ると近いサロンをご案内」の一文</td><td>文面。浅井様らしい言い回しに直すか</td></tr>
+<tr><td>都道府県名への自動の返事</td><td>「福岡」と送られたら、福岡のサロン一覧を返す</td><td>サロンがない県から来たときの返し方</td></tr>
+<tr><td>個別の返信</td><td>自動の返事と、浅井様が直接返すチャットを両方使う</td><td><b>誰が、いつ返信するか</b>（浅井様か事務局か、何日以内に返すか）</td></tr>
+<tr><td>ステップ配信</td><td>友だち追加の1日後・3日後・7日後に、短い読みもの</td><td>回数と、内容に入れてほしい話</td></tr>
+<tr><td>イベントなどの配信</td><td>決まったときと1週間前に配信。月1回まで財団からのお便り</td><td><b>誰が配信するか</b>（財団で送るか、芝原が代わりに送るか）</td></tr>
+<tr><td>料金プラン</td><td>友だちの増え方を見て判断</td><td>無料のままか、ライト（月5,000円・税別）にするか</td></tr>
+</table></div>
+<div class="warn"><b>通数のこと。</b>無料プランで送れるのは月200通です。ステップ配信も1人に届くたびに数えるので、3回にすると月67人以上友だちが増えたときに足りなくなります。友だちの人数を見てから、一緒に決めましょう。</div>
+
+<h2><small>STEP 4</small>ご用意いただくもの<span class="who">浅井様・できる範囲で</span></h2>
+<ul class="check">
+<li><b>サロンの最新の一覧</b><small>閉じたサロン、新しく開いたサロン、電話番号が変わったサロン。都道府県への自動の返事に使います</small></li>
+<li><b>イベントの予定</b><small>来月のイベントの日時・会場・参加費と、Select Type の申込ページのURL</small></li>
+<li><b>写真（あれば）</b><small>イベントの様子、サロンの雰囲気、財団の方の写真。メニューや配信に使います。なければ今のホームページの写真を使います</small></li>
+<li><b>「これは言わない」こと</b><small>配信で触れてほしくない話や、表現の決まりがあれば</small></li>
+</ul>
+
+<h2><small>STEP 5</small>設定する<span class="who me">芝原・2〜3日</span></h2>
+<ol class="steps">
+<li><b>リッチメニューを作って設定</b><em>画像（2500×1686px）を作り、6つのリンク先を設定</em></li>
+<li><b>あいさつメッセージ</b><em>決まった文面を設定</em></li>
+<li><b>都道府県名への自動の返事</b><em>「福岡」「福岡県」「ふくおか」などの言い方もまとめて登録</em></li>
+<li><b>ステップ配信</b><em>文章を作り、効果をうたう表現がないか確認してから設定</em></li>
+<li><b>ホームページの「友だち追加」ボタン</b><em>新しいサイトのLINEボタンを、QR画像ではなく友だち追加のリンクにつなぐ</em></li>
+</ol>
+
+<h2><small>STEP 6</small>スマホで確かめる<span class="who">浅井様・5分</span></h2>
+<p class="lead">設定が終わったら芝原からご連絡します。浅井様のスマホで、次を試してください。</p>
+<ul class="check">
+<li><b>トーク画面の下にメニューが出るか</b><small>出ないときは、トーク画面をいったん閉じて開き直すと出ます</small></li>
+<li><b>メニューの6つを押して、それぞれのページが開くか</b></li>
+<li><b>「鹿児島」と送って、サロンの案内が返ってくるか</b></li>
+<li><b>あいさつメッセージ</b><small>新しく友だち追加したときにだけ届くので、事務局の方など、まだ友だちでない方に追加してもらって確かめるのが確実です</small></li>
+</ul>
+
+<h2><small>MEMO</small>浅井様にしかできないこと</h2>
+<ul class="check">
+<li><b>メンバーの追加と削除</b><small>「管理者」の方だけができます</small></li>
+<li><b>料金プランの変更とお支払い</b><small>お支払いの情報は御財団でお持ちください</small></li>
+<li><b>個別のチャットへの返信</b><small>お客様やサロン開業のご相談への返事は、御財団の言葉でお願いします</small></li>
+</ul>
+
+<footer>アシログ　芝原 朋弥</footer>
+</div>
