@@ -580,3 +580,64 @@ body.rk-off .rk-legend{opacity:.6}
 /* ===== 2026-09-14 ヘッダーにブログを足したので幅を詰める ===== */
 .nav .btn.hd{flex:none}
 @media(max-width:1480px){.brand .corp{display:none}.menu{gap:13px;font-size:14px}}
+
+/* ===== 写真主役の部品（2026-09-20 文字を少なく・写真を増やす） ===== */
+.sec.tight.pt0{padding-top:0}
+.sec-head.mt{margin-top:76px}
+.note-s{color:var(--faint);font-size:14px;letter-spacing:.06em;margin:0}
+.lead-big{font-family:"Shippori Mincho","Hiragino Mincho ProN",serif;font-size:clamp(19px,2.3vw,27px);line-height:2.05;letter-spacing:.04em;margin:0 0 18px}
+
+/* 全幅の写真帯 */
+.band{position:relative;height:min(58vh,480px);overflow:hidden;background:var(--bg-3)}
+.band-media{position:absolute;inset:0}
+.band-cap{position:absolute;left:0;right:0;bottom:28px;z-index:2}
+.band-cap span{display:inline-block;color:#fff;font-family:"Shippori Mincho",serif;font-size:clamp(16px,1.9vw,22px);letter-spacing:.08em;text-shadow:0 2px 18px rgba(6,22,38,.6)}
+.ph-note{position:absolute;right:12px;bottom:12px;z-index:3;font-size:10.5px;letter-spacing:.1em;color:#fff;background:rgba(6,22,38,.48);padding:3px 9px;border-radius:2px;pointer-events:none}
+
+/* 写真のグリッド */
+.ga{position:relative;display:grid;gap:14px;grid-template-columns:repeat(3,1fr);margin:30px 0 10px}
+.ga.two{grid-template-columns:repeat(2,1fr)}
+.ga-ph{overflow:hidden;aspect-ratio:4/5;background:var(--bg-3)}
+.ga.wide .ga-ph{aspect-ratio:3/2}
+.ga-ph img{width:100%;height:100%;object-fit:cover}
+.ga figcaption{font-size:13px;color:var(--mut);margin-top:9px;letter-spacing:.04em}
+.ga .ph-note{right:12px;bottom:auto;top:12px}
+
+/* 声を写真の上に */
+.vph{position:relative;display:grid;gap:18px;grid-template-columns:repeat(3,1fr)}
+.vph-it{margin:0;position:relative;overflow:hidden}
+.vph-ph{aspect-ratio:3/4;overflow:hidden;background:var(--bg-3)}
+.vph-ph img{width:100%;height:100%;object-fit:cover}
+.vph-it figcaption{position:absolute;inset:auto 0 0 0;padding:26px 22px 22px;color:#fff;background:linear-gradient(0deg,rgba(6,22,38,.92) 12%,rgba(6,22,38,.55) 60%,rgba(6,22,38,0))}
+.vph-it .q{display:block;font-family:"Shippori Mincho",serif;font-size:15.5px;line-height:1.95;letter-spacing:.02em}
+.vph-it b{display:block;margin-top:10px;font-size:12.5px;font-weight:500;color:var(--gold-l);letter-spacing:.08em}
+
+/* 3つの事業に写真 */
+.pillars.photo{position:relative}
+.pillars.photo .pl-ph{aspect-ratio:3/2;overflow:hidden;margin:-4px -4px 18px;background:var(--bg-3)}
+.pillars.photo .pl-ph img{width:100%;height:100%;object-fit:cover}
+
+/* 続きを読む */
+.fold{border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin:20px 0}
+.fold summary{cursor:pointer;list-style:none;padding:15px 2px;display:flex;align-items:center;gap:10px;font-size:14.5px;font-weight:700;color:var(--sea)}
+.fold summary::-webkit-details-marker{display:none}
+.fold summary::before{content:"＋";font-size:15px;color:var(--gold);transition:transform .3s var(--ease)}
+.fold[open] summary::before{content:"−"}
+.fold summary:hover span{text-decoration:underline}
+.fold-in{padding:2px 0 18px;color:var(--mut);font-size:16px}
+.fold-in p:last-child{margin-bottom:0}
+
+/* プロフィールの写真を大きく */
+.person-full.photo .ph{overflow:hidden;border-radius:2px}
+.person-full.photo .p-lead{font-size:17.5px;line-height:1.95}
+
+@media(max-width:860px){
+  .vph{grid-template-columns:1fr}
+  .vph-ph{aspect-ratio:4/3}
+}
+@media(max-width:760px){
+  .ga,.ga.two{grid-template-columns:1fr 1fr;gap:10px}
+  .ga figcaption{font-size:12px}
+  .band{height:42vh}
+  .lead-big{font-size:19px;line-height:1.95}
+}
