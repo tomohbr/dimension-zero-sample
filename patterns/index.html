@@ -1,0 +1,144 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex"><title>比較ボード｜一般財団法人ディメンション・ゼロ デザイン案</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600&family=Zen+Kaku+Gothic+New:wght@300;400;500;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&display=swap"><style>*{box-sizing:border-box}html{-webkit-text-size-adjust:100%}
+body{margin:0;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block;height:auto}a{color:inherit;text-decoration:none}
+h1,h2,h3,p,figure,ul,ol{margin:0;padding:0}ul,ol{list-style:none}
+.pbadge{position:fixed;left:14px;bottom:14px;z-index:99;background:rgba(14,26,36,.9);color:#fff;
+ font:500 12px/1 "Zen Kaku Gothic New",sans-serif;letter-spacing:.06em;padding:11px 15px;border-radius:999px;backdrop-filter:blur(6px)}
+.pbadge span{opacity:.6;margin-left:6px}
+@media print{.pbadge{display:none}}
+
+body{background:#F4F6F8;color:#111820;font-family:"Zen Kaku Gothic New",sans-serif;font-size:15px;line-height:1.85}
+.wrap{max-width:1180px;margin:0 auto;padding:0 22px}
+header{background:#0E1A24;color:#fff;padding:34px 0 30px}
+header .en{font-family:"Cormorant Garamond",serif;font-style:italic;letter-spacing:.2em;color:#E9D9B0;font-size:15px}
+header h1{font-family:"Shippori Mincho",serif;font-weight:500;font-size:clamp(23px,3vw,32px);margin:8px 0 10px;letter-spacing:.04em}
+header p{opacity:.85;font-size:14.5px;max-width:62em}
+.how{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:22px}
+.how div{background:rgba(255,255,255,.07);border:1px solid rgba(233,217,176,.25);border-radius:12px;padding:14px 16px;font-size:13.5px}
+.how b{color:#E9D9B0;display:block;font-size:13px;letter-spacing:.06em;margin-bottom:3px}
+section{padding:40px 0}
+h2{font-family:"Shippori Mincho",serif;font-weight:500;font-size:22px;letter-spacing:.06em;margin:0 0 6px}
+.sub{color:#5b6773;font-size:14px;margin:0 0 20px}
+.cards{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+.card{background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 8px 24px rgba(17,24,32,.07);display:flex;flex-direction:column}
+.card .th{aspect-ratio:4/5;background:#e7ecf0;overflow:hidden;position:relative}
+.card .th img{width:100%;height:100%;object-fit:cover;object-position:top center}
+.card .k{position:absolute;left:10px;top:10px;background:#0E1A24;color:#E9D9B0;font-size:12px;font-weight:700;letter-spacing:.1em;padding:4px 10px;border-radius:999px}
+.card .b{padding:14px 15px 16px;display:flex;flex-direction:column;flex:1}
+.card b{font-family:"Shippori Mincho",serif;font-size:17px;font-weight:500;letter-spacing:.06em}
+.card .cat{font-size:11.5px;color:#8a96a3;margin-bottom:6px}
+.card p{font-size:12.5px;color:#5b6773;line-height:1.8;flex:1}
+.card a{margin-top:12px;text-align:center;background:#1F5F8B;color:#fff;font-weight:700;font-size:13.5px;padding:11px;border-radius:9px}
+.tbl{background:#fff;border-radius:14px;overflow:auto;box-shadow:0 8px 24px rgba(17,24,32,.07)}
+table{width:100%;border-collapse:collapse;font-size:13.5px;min-width:860px}
+th,td{padding:12px 13px;border-bottom:1px solid #e9edf1;text-align:left;vertical-align:top}
+thead th{background:#EAF0F4;font-size:12px;letter-spacing:.08em;color:#3d4a56;position:sticky;top:0}
+tbody th{font-weight:700;width:150px}
+tbody th small{display:block;font-weight:400;color:#8a96a3;font-size:11.5px;margin-top:2px}
+td label{display:flex;gap:8px;cursor:pointer;line-height:1.7}
+td input{margin-top:5px;flex:none;accent-color:#1F5F8B}
+td.on{background:#F1F7FB;box-shadow:inset 0 0 0 2px #1F5F8B}
+.memo{display:grid;grid-template-columns:1.25fr .75fr;gap:16px;margin-top:18px}
+.memo textarea{width:100%;min-height:230px;border:1px solid #d7dee4;border-radius:12px;padding:15px;font-family:inherit;font-size:13.5px;line-height:1.9;background:#fff;resize:vertical}
+.side{background:#fff;border-radius:12px;padding:16px 18px;box-shadow:0 8px 24px rgba(17,24,32,.07)}
+.side h3{font-size:15px;margin:0 0 8px}
+.side p{font-size:13px;color:#5b6773}
+.btns{display:flex;gap:9px;flex-wrap:wrap;margin-top:12px}
+.btns button{border:0;border-radius:999px;padding:11px 20px;font-family:inherit;font-weight:700;font-size:13.5px;cursor:pointer}
+.btns .p{background:#111820;color:#fff}.btns .g{background:#E4EAEF;color:#111820}
+.tally{font-size:13px;color:#5b6773;margin-top:10px;line-height:2}
+.tally b{color:#1F5F8B}
+footer{padding:26px 0 44px;color:#8a96a3;font-size:12.5px}
+@media(max-width:960px){.cards{grid-template-columns:repeat(2,1fr)}.how{grid-template-columns:1fr}.memo{grid-template-columns:1fr}}
+@media print{header{background:#fff;color:#111820}.btns,.card a{display:none}body{background:#fff}}
+</style></head><body>
+<header><div class="wrap">
+  <div class="en">Design Proposals</div>
+  <h1>トップページ デザイン5案　／　部分ごとに選べます</h1>
+  <p>「文字を少なく、写真を多く」のご要望をふまえ、作りを一度リセットして5案つくりました。内容（文章・写真）は5案とも同じにしてあります。違うのは見え方だけですので、そのまま比べていただけます。</p>
+  <div class="how">
+    <div><b>1　見る</b>気になる案の「大きく見る」から、実際に動くページをご覧ください。スマホでも開けます。</div>
+    <div><b>2　部分ごとに選ぶ</b>「トップの第一印象はB、サロンの探し方はE」のように、良いと思った案を選んでください。</div>
+    <div><b>3　そのまま送る</b>選ぶと下に決定メモができます。コピーして公式LINEでお送りいただければ、その組み合わせで作ります。</div>
+  </div>
+</div></header>
+
+<section><div class="wrap">
+  <h2>5つの案</h2>
+  <p class="sub">案Aがご参考サイト（シックスセンスラボ様）にいちばん近い作りです。右にいくほど、違う方向に振っています。</p>
+  <div class="cards"><div class="card"><div class="th"><span class="k">案A</span><img src="thumb/a.jpg" alt="デザイン案A 白磁"></div><div class="b"><b>白磁</b><div class="cat">ご参考サイトに寄せた案</div><p>白と明朝、中央ぞろえ。文字は小さく、写真を大きく。いちばん静かで、品のある見え方。</p><a href="a.html" target="_blank" rel="noopener">大きく見る</a></div></div><div class="card"><div class="th"><span class="k">案B</span><img src="thumb/b.jpg" alt="デザイン案B 余白と大判写真"></div><div class="b"><b>余白と大判写真</b><div class="cat">写真だけで語る案</div><p>画面いっぱいの写真が続き、文章は一行ずつ。読ませるより、感じてもらう作り。</p><a href="b.html" target="_blank" rel="noopener">大きく見る</a></div></div><div class="card"><div class="th"><span class="k">案C</span><img src="thumb/c.jpg" alt="デザイン案C 誌面"></div><div class="b"><b>誌面</b><div class="cat">雑誌のような案</div><p>大きな明朝の見出しと罫線。読み物として見せる。文章を載せたいときに強い。</p><a href="c.html" target="_blank" rel="noopener">大きく見る</a></div></div><div class="card"><div class="th"><span class="k">案D</span><img src="thumb/d.jpg" alt="デザイン案D 和と余白"></div><div class="b"><b>和と余白</b><div class="cat">縦書きの案</div><p>縦書きの見出しと正方形の写真。日本の静けさ。財団の世界観に寄せた作り。</p><a href="d.html" target="_blank" rel="noopener">大きく見る</a></div></div><div class="card"><div class="th"><span class="k">案E</span><img src="thumb/e.jpg" alt="デザイン案E 一目でわかる"></div><div class="b"><b>一目でわかる</b><div class="cat">使いやすさ優先の案</div><p>大きなタイルで「探す・見る・相談する」がすぐ押せる。スマホでいちばん迷わない。</p><a href="e.html" target="_blank" rel="noopener">大きく見る</a></div></div></div>
+</div></section>
+
+<section style="padding-top:8px"><div class="wrap">
+  <h2>部分ごとに選ぶ</h2>
+  <p class="sub">ぜんぶを1案に決める必要はありません。良いと思った部分を選んでいただければ、組み合わせて1つのサイトにします。</p>
+  <div class="tbl"><table>
+    <thead><tr><th>部分</th><th>案A<br><small style="font-weight:400;color:#8a96a3">白磁</small></th><th>案B<br><small style="font-weight:400;color:#8a96a3">余白と大判写真</small></th><th>案C<br><small style="font-weight:400;color:#8a96a3">誌面</small></th><th>案D<br><small style="font-weight:400;color:#8a96a3">和と余白</small></th><th>案E<br><small style="font-weight:400;color:#8a96a3">一目でわかる</small></th></tr></thead>
+    <tbody><tr><th>トップの第一印象<small>開いた瞬間に目に入るところ</small></th><td data-part="hero" data-key="A"><label><input type="radio" name="hero" value="A"><span>大きな写真の上に、明朝で静かに2行</span></label></td><td data-part="hero" data-key="B"><label><input type="radio" name="hero" value="B"><span>画面いっぱいの写真。文字は最小限</span></label></td><td data-part="hero" data-key="C"><label><input type="radio" name="hero" value="C"><span>大きな見出しと写真を左右に分ける</span></label></td><td data-part="hero" data-key="D"><label><input type="radio" name="hero" value="D"><span>縦書きの見出しと正方形の写真</span></label></td><td data-part="hero" data-key="E"><label><input type="radio" name="hero" value="E"><span>すぐに「サロンを探す」検索が出る</span></label></td></tr><tr><th>メニューの出し方<small>どこに何があるかの示し方</small></th><td data-part="nav" data-key="A"><label><input type="radio" name="nav" value="A"><span>中央ぞろえ・罫線つき（ご参考サイトと同じ）</span></label></td><td data-part="nav" data-key="B"><label><input type="radio" name="nav" value="B"><span>最小限。写真の邪魔をしない</span></label></td><td data-part="nav" data-key="C"><label><input type="radio" name="nav" value="C"><span>ロゴの横に並べる（新聞の題字のよう）</span></label></td><td data-part="nav" data-key="D"><label><input type="radio" name="nav" value="D"><span>中央に細く、金の罫線</span></label></td><td data-part="nav" data-key="E"><label><input type="radio" name="nav" value="E"><span>固定ヘッダー＋スマホは画面下のボタン</span></label></td></tr><tr><th>製品の見せ方<small>6つのデバイスの並べ方</small></th><td data-part="prod" data-key="A"><label><input type="radio" name="prod" value="A"><span>白背景に3列。名前だけ</span></label></td><td data-part="prod" data-key="B"><label><input type="radio" name="prod" value="B"><span>横にスワイプする大判カード</span></label></td><td data-part="prod" data-key="C"><label><input type="radio" name="prod" value="C"><span>1行ずつのリスト。説明が入る</span></label></td><td data-part="prod" data-key="D"><label><input type="radio" name="prod" value="D"><span>正方形の枠に1点ずつ</span></label></td><td data-part="prod" data-key="E"><label><input type="radio" name="prod" value="E"><span>カードで3列。押せる面が大きい</span></label></td></tr><tr><th>サロンの探し方<small>売上の入口。いちばん大事なところ</small></th><td data-part="salon" data-key="A"><label><input type="radio" name="salon" value="A"><span>中央に小さく、静かに</span></label></td><td data-part="salon" data-key="B"><label><input type="radio" name="salon" value="B"><span>黒地に大きく1画面</span></label></td><td data-part="salon" data-key="C"><label><input type="radio" name="salon" value="C"><span>写真と並べて、開業の案内も添える</span></label></td><td data-part="salon" data-key="D"><label><input type="radio" name="salon" value="D"><span>中央に静かに</span></label></td><td data-part="salon" data-key="E"><label><input type="radio" name="salon" value="E"><span>最上部に大きく。最初に目に入る</span></label></td></tr><tr><th>お客様の声<small>体験された方の言葉</small></th><td data-part="voice" data-key="A"><label><input type="radio" name="voice" value="A"><span>3列・罫線だけの静かな見せ方</span></label></td><td data-part="voice" data-key="B"><label><input type="radio" name="voice" value="B"><span>写真の上に大きく1つ</span></label></td><td data-part="voice" data-key="C"><label><input type="radio" name="voice" value="C"><span>雑誌の引用のように写真つき</span></label></td><td data-part="voice" data-key="D"><label><input type="radio" name="voice" value="D"><span>中央ぞろえで余白広め</span></label></td><td data-part="voice" data-key="E"><label><input type="radio" name="voice" value="E"><span>薄い色のカードで3つ</span></label></td></tr><tr><th>イベントの出し方<small>オハナシ会・体験会の告知</small></th><td data-part="event" data-key="A"><label><input type="radio" name="event" value="A"><span>日付と題名だけの一覧</span></label></td><td data-part="event" data-key="B"><label><input type="radio" name="event" value="B"><span>黒地に大きな日付</span></label></td><td data-part="event" data-key="C"><label><input type="radio" name="event" value="C"><span>記事の見出しのような一覧</span></label></td><td data-part="event" data-key="D"><label><input type="radio" name="event" value="D"><span>細い罫線の一覧</span></label></td><td data-part="event" data-key="E"><label><input type="radio" name="event" value="E"><span>日付が四角く目立つ＋申込ボタン</span></label></td></tr><tr><th>全体の色と文字<small>サイト全体の空気</small></th><td data-part="tone" data-key="A"><label><input type="radio" name="tone" value="A"><span>白・明朝・小さな文字（ご参考サイトに近い）</span></label></td><td data-part="tone" data-key="B"><label><input type="radio" name="tone" value="B"><span>黒・写真主役・文字は最小</span></label></td><td data-part="tone" data-key="C"><label><input type="radio" name="tone" value="C"><span>生成り色・明朝の大見出し・罫線</span></label></td><td data-part="tone" data-key="D"><label><input type="radio" name="tone" value="D"><span>和紙のような生成り・金の細線</span></label></td><td data-part="tone" data-key="E"><label><input type="radio" name="tone" value="E"><span>白と青・太めのゴシック・大きなボタン</span></label></td></tr></tbody>
+  </table></div>
+  <div id="tally" class="tally"></div>
+
+  <div class="memo">
+    <div>
+      <textarea id="memo" readonly aria-label="決定メモ"></textarea>
+      <div class="btns">
+        <button class="p" id="copy">決定メモをコピー</button>
+        <button class="g" id="print">印刷・PDFにする</button>
+        <button class="g" id="reset">選び直す</button>
+      </div>
+    </div>
+    <div class="side">
+      <h3>そのほかのご要望</h3>
+      <p>写真の雰囲気、入れたい言葉、気になる点など、思いついたことをこちらへ。決定メモに一緒に入ります。</p>
+      <textarea id="note" style="min-height:120px;margin-top:10px" placeholder="例）製品の写真はもっと大きく。海の写真より森のほうが好み。"></textarea>
+      <p style="margin-top:10px;font-size:12px;color:#8a96a3">選んだ内容はこの端末に保存されます（このページを閉じても残ります）。</p>
+    </div>
+  </div>
+</div></section>
+
+<footer><div class="wrap">アシログ　芝原 朋弥　／　一般財団法人ディメンション・ゼロ様　トップページ デザイン案　2026年9月<br>写真は「イメージ写真」の仮素材です。財団からお預かりする写真に差し替えます。</div></footer>
+<script>
+(function(){
+  var KEY='dz_pattern_pick_v1';
+  var PARTS=[{"id": "hero", "title": "トップの第一印象", "opts": {"A": "大きな写真の上に、明朝で静かに2行", "B": "画面いっぱいの写真。文字は最小限", "C": "大きな見出しと写真を左右に分ける", "D": "縦書きの見出しと正方形の写真", "E": "すぐに「サロンを探す」検索が出る"}}, {"id": "nav", "title": "メニューの出し方", "opts": {"A": "中央ぞろえ・罫線つき（ご参考サイトと同じ）", "B": "最小限。写真の邪魔をしない", "C": "ロゴの横に並べる（新聞の題字のよう）", "D": "中央に細く、金の罫線", "E": "固定ヘッダー＋スマホは画面下のボタン"}}, {"id": "prod", "title": "製品の見せ方", "opts": {"A": "白背景に3列。名前だけ", "B": "横にスワイプする大判カード", "C": "1行ずつのリスト。説明が入る", "D": "正方形の枠に1点ずつ", "E": "カードで3列。押せる面が大きい"}}, {"id": "salon", "title": "サロンの探し方", "opts": {"A": "中央に小さく、静かに", "B": "黒地に大きく1画面", "C": "写真と並べて、開業の案内も添える", "D": "中央に静かに", "E": "最上部に大きく。最初に目に入る"}}, {"id": "voice", "title": "お客様の声", "opts": {"A": "3列・罫線だけの静かな見せ方", "B": "写真の上に大きく1つ", "C": "雑誌の引用のように写真つき", "D": "中央ぞろえで余白広め", "E": "薄い色のカードで3つ"}}, {"id": "event", "title": "イベントの出し方", "opts": {"A": "日付と題名だけの一覧", "B": "黒地に大きな日付", "C": "記事の見出しのような一覧", "D": "細い罫線の一覧", "E": "日付が四角く目立つ＋申込ボタン"}}, {"id": "tone", "title": "全体の色と文字", "opts": {"A": "白・明朝・小さな文字（ご参考サイトに近い）", "B": "黒・写真主役・文字は最小", "C": "生成り色・明朝の大見出し・罫線", "D": "和紙のような生成り・金の細線", "E": "白と青・太めのゴシック・大きなボタン"}}], NAMES={"A": "白磁", "B": "余白と大判写真", "C": "誌面", "D": "和と余白", "E": "一目でわかる"};
+  var saved={};try{saved=JSON.parse(localStorage.getItem(KEY)||'{}')}catch(e){}
+  var memo=document.getElementById('memo'), tally=document.getElementById('tally');
+  function paint(){
+    var lines=['【ディメンション・ゼロ トップページ　部分ごとの決定メモ】','（'+new Date().toLocaleDateString('ja-JP')+'　アシログ）',''];
+    var count={};
+    PARTS.forEach(function(p){
+      var v=saved[p.id];
+      lines.push('■ '+p.title+'：'+(v?('案'+v+'（'+NAMES[v]+'）'):'まだ決めていません'));
+      if(v){lines.push('　　'+p.opts[v]);count[v]=(count[v]||0)+1;}
+      lines.push('');
+    });
+    var note=document.getElementById('note').value.trim();
+    if(note){lines.push('■ そのほかのご要望');lines.push(note);lines.push('');}
+    memo.value=lines.join('\n');
+    var t=Object.keys(count).sort(function(a,b){return count[b]-count[a]});
+    tally.innerHTML = t.length ? ('いま選ばれている数：'+t.map(function(k){return '<b>案'+k+'</b> '+count[k]+'か所'}).join('　／　')) : '部分ごとに選ぶと、ここに集計が出ます。';
+    document.querySelectorAll('td[data-part]').forEach(function(td){
+      td.classList.toggle('on', saved[td.dataset.part]===td.dataset.key);
+    });
+  }
+  document.querySelectorAll('input[type=radio]').forEach(function(r){
+    if(saved[r.name]===r.value)r.checked=true;
+    r.addEventListener('change',function(){saved[r.name]=r.value;save();});
+  });
+  document.getElementById('note').addEventListener('input',function(){saved.__note=this.value;save();});
+  if(saved.__note)document.getElementById('note').value=saved.__note;
+  function save(){try{localStorage.setItem(KEY,JSON.stringify(saved))}catch(e){}paint();}
+  document.getElementById('copy').onclick=function(){
+    memo.select();memo.setSelectionRange(0,99999);
+    try{document.execCommand('copy');this.textContent='コピーしました';var b=this;setTimeout(function(){b.textContent='決定メモをコピー'},1600)}catch(e){}
+  };
+  document.getElementById('reset').onclick=function(){
+    if(!confirm('選んだ内容を消します。よろしいですか？'))return;
+    saved={};try{localStorage.removeItem(KEY)}catch(e){}
+    document.querySelectorAll('input[type=radio]').forEach(function(r){r.checked=false});
+    document.getElementById('note').value='';paint();
+  };
+  document.getElementById('print').onclick=function(){window.print()};
+  paint();
+})();
+</script></body></html>

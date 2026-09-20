@@ -21,6 +21,7 @@
       <button type="button" data-t="post">ブログを書く</button>
       <button type="button" data-t="list">載せたもの</button>
       <button type="button" data-t="promo">告知をつくる</button>
+      <button type="button" data-t="plan">イベントの段取り</button>
     </nav>
   </div>
 </header>
@@ -38,11 +39,22 @@
         <h2>イベントを載せる</h2>
         <p class="hint">*は必ず入れてください。入れるそばから、右に「サイトでの見え方」と「表現チェック」が出ます。</p>
         <input type="hidden" id="evId">
+        <div class="tmpl">
+          <div class="tmpl-h">ひな形から始める<small>選ぶと下書きが入ります。あとから自由に直せます</small></div>
+          <div class="tmpl-b">
+            <button class="btn small ghost" type="button" data-tmpl="ohanashi">オハナシ会</button>
+            <button class="btn small ghost" type="button" data-tmpl="taiken">サロン体験会</button>
+            <button class="btn small ghost" type="button" data-tmpl="open">サロンのオープン記念</button>
+            <button class="btn small ghost" type="button" data-tmpl="setsumei">サロン開業の説明会</button>
+            <button class="btn small ghost" type="button" id="evDup">前回のイベントを複製</button>
+          </div>
+        </div>
         <label>イベント名 *<input id="evTitle" required maxlength="80" placeholder="例：秋のオハナシ会"></label>
         <div class="row3">
           <label>開催日 *<input id="evDate" type="date" required></label>
           <label>開始<input id="evStart" type="time"></label>
           <label>終了<input id="evEnd" type="time"></label>
+          <label>所要<select id="evDur"><option value="">選ぶ</option><option value="60">1時間</option><option value="90" selected>1時間30分</option><option value="120">2時間</option><option value="150">2時間30分</option><option value="180">3時間</option></select></label>
         </div>
         <label>会場名 *<input id="evVenue" required placeholder="例：〇〇会館 2階"></label>
         <label>住所<input id="evAddress" placeholder="例：鹿児島県鹿児島市〇〇町1-2"></label>
@@ -51,7 +63,13 @@
           <label>定員<input id="evCapacity" placeholder="例：30名"></label>
         </div>
         <label>主催<input id="evOrg" placeholder="例：一般財団法人ディメンション・ゼロ／サロン名"></label>
+        <div class="row3">
+          <label>申込の締切<input id="evDeadline" type="date"></label>
+          <label>サイトに出す日<input id="evPublish" type="date"><span class="hint-s">空欄なら保存した日から</span></label>
+        </div>
         <label>申込ページのURL（Select Type など）<input id="evApply" type="url" placeholder="https://select-type.com/..."></label>
+        <label>持ち物・お願い<input id="evNotes" placeholder="例：動きやすい服装でお越しください／飲み物をご用意ください"></label>
+        <label>当日の連絡先<input id="evContact" placeholder="例：財団事務局 090-0000-0000（当日のみ）"></label>
         <label>写真<input id="evImage" type="file" accept="image/*"><span class="img-state" id="evImgState">写真がないときは水面の写真が入ります</span></label>
         <label>内容<textarea id="evBody" rows="7" placeholder="どんな会か、当日の流れ、持ち物など"></textarea></label>
         <div class="adm-actions">
@@ -113,6 +131,11 @@
         <p class="hint">イベントを選ぶと、LINE・Instagram・Facebook・Googleビジネスプロフィールにそのまま貼れる文章と、告知画像ができます。</p>
         <label>イベント<select id="prEvent"></select></label>
         <div class="promo-texts" id="prTexts"></div>
+        <div class="promo-extra">
+          <button class="btn small" type="button" id="prIcs">カレンダーに入れる（.ics）</button>
+          <button class="btn small ghost" type="button" id="prAll">告知文をまとめてコピー</button>
+          <span class="hint-s">.ics は Google カレンダー・iPhone のカレンダーにそのまま取り込めます</span>
+        </div>
       </div>
       <aside class="adm-side">
         <h3>告知画像</h3>
@@ -122,6 +145,24 @@
         </div>
         <h3>表現チェック</h3>
         <div class="adm-check" id="prCheck"></div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- 段取り -->
+  <section class="pane" id="pane-plan">
+    <div class="adm-grid">
+      <div class="adm-form">
+        <h2>イベントの段取り</h2>
+        <p class="hint">開催日から逆算して、いつ何をするかを並べています。チェックは自動で保存されます。</p>
+        <label>イベント<select id="plEvent"></select></label>
+        <div class="plan-list" id="plList"></div>
+      </div>
+      <aside class="adm-side">
+        <h3>このイベントの数字</h3>
+        <div class="plan-num" id="plNum"></div>
+        <h3>次にすること</h3>
+        <div class="plan-next" id="plNext"></div>
       </aside>
     </div>
   </section>

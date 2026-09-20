@@ -58,3 +58,36 @@ body.adm{background:var(--bg-2)}
 .promo-imgs figure{margin:0;background:#fff;border:1px solid var(--line);border-radius:14px;padding:10px}
 .promo-imgs canvas{width:100%;height:auto;display:block;border-radius:8px}
 .promo-imgs figcaption{font-size:12.5px;color:var(--mut);margin-top:8px;display:flex;flex-direction:column;gap:6px;align-items:flex-start}
+
+/* ===== イベントを打ちやすくする道具（2026-09-20 追加） ===== */
+.tmpl{border:1px dashed var(--line);border-radius:12px;padding:12px 14px;margin:0 0 16px;background:var(--bg-2)}
+.tmpl-h{font-size:13.5px;font-weight:700;margin-bottom:8px}
+.tmpl-h small{font-weight:400;color:var(--faint);font-size:12px;margin-left:8px}
+.tmpl-b{display:flex;gap:8px;flex-wrap:wrap}
+.row3{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.hint-s{display:block;font-size:11.5px;color:var(--faint);margin-top:3px}
+.promo-extra{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:14px;padding-top:14px;border-top:1px solid var(--line)}
+.plan-list{margin-top:14px;border-top:1px solid var(--line)}
+.adm-form label.plan-it,.plan-it{display:grid;grid-template-columns:22px 118px 1fr auto;gap:12px;align-items:start;padding:13px 4px;border-bottom:1px solid var(--line);cursor:pointer}
+.adm-form .plan-it input,.plan-it input{margin-top:4px;width:18px;height:18px;accent-color:var(--sea)}
+.adm-form .plan-it .pl-d,.plan-it .pl-d{font-size:13.5px;font-weight:700;color:var(--ink-2);line-height:1.5}
+.plan-it .pl-d small{display:block;font-weight:400;color:var(--faint);font-size:11.5px}
+.adm-form .plan-it .pl-t b,.plan-it .pl-t b{display:block;font-size:14.5px}
+.plan-it .pl-t small{color:var(--mut);font-size:12.5px;line-height:1.7}
+.plan-it .pl-s{font-size:11.5px;font-weight:700;color:var(--faint);white-space:nowrap}
+.plan-it.done{opacity:.55}
+.plan-it.done .pl-t b{text-decoration:line-through}
+.plan-it.late .pl-s{color:#B4231E}
+.plan-it.late{background:#FDF3F2}
+.pn{display:flex;align-items:baseline;gap:10px;padding:9px 0;border-bottom:1px solid var(--line)}
+.pn b{font-size:22px;font-family:"Cormorant Garamond",serif}
+.pn span{font-size:12.5px;color:var(--mut)}
+.plan-next p{font-size:13.5px;margin:0}
+.plan-next small{color:var(--mut);font-size:12px}
+@media(max-width:700px){
+  .row3{grid-template-columns:1fr}
+  .adm-form label.plan-it,.plan-it{grid-template-columns:22px 1fr;gap:4px 8px}
+  .adm-form .plan-it .pl-d,.plan-it .pl-d{grid-column:2;font-size:12.5px}
+  .adm-form .plan-it .pl-d small,.plan-it .pl-d small{display:inline;margin-left:8px}
+  .plan-it .pl-t{grid-column:2}.plan-it .pl-s{grid-column:2}
+}

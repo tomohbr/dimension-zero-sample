@@ -1,0 +1,157 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex"><title>デザイン案E 一目でわかる｜一般財団法人ディメンション・ゼロ デザイン案</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600&family=Zen+Kaku+Gothic+New:wght@300;400;500;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&display=swap"><style>*{box-sizing:border-box}html{-webkit-text-size-adjust:100%}
+body{margin:0;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block;height:auto}a{color:inherit;text-decoration:none}
+h1,h2,h3,p,figure,ul,ol{margin:0;padding:0}ul,ol{list-style:none}
+.pbadge{position:fixed;left:14px;bottom:14px;z-index:99;background:rgba(14,26,36,.9);color:#fff;
+ font:500 12px/1 "Zen Kaku Gothic New",sans-serif;letter-spacing:.06em;padding:11px 15px;border-radius:999px;backdrop-filter:blur(6px)}
+.pbadge span{opacity:.6;margin-left:6px}
+@media print{.pbadge{display:none}}
+
+body{background:#fff;color:#111820;font-family:"Zen Kaku Gothic New",sans-serif;font-size:15.5px;line-height:1.85}
+.wrap{max-width:1140px;margin:0 auto;padding:0 20px}
+header{position:sticky;top:0;z-index:40;background:rgba(255,255,255,.95);backdrop-filter:blur(10px);border-bottom:1px solid #e9edf1}
+.hb{display:flex;align-items:center;gap:14px;height:64px}
+.hb .m{font-weight:700;font-size:16px;letter-spacing:.06em}
+.hb .m span{display:block;font-size:10px;color:#8a96a3;letter-spacing:.18em;font-weight:400}
+.hb .sp{margin-left:auto}
+.hb a.line{background:#06C755;color:#fff;font-weight:700;font-size:13.5px;padding:10px 18px;border-radius:999px}
+.hb a.find{border:2px solid #111820;font-weight:700;font-size:13.5px;padding:8px 18px;border-radius:999px}
+.top{background:linear-gradient(180deg,#EAF2F7,#fff);padding:28px 0 8px}
+.top h1{font-size:clamp(21px,3.2vw,30px);font-weight:700;letter-spacing:.02em;line-height:1.5;font-family:"Shippori Mincho",serif}
+.top p{color:#53606d;font-size:14px;margin-top:8px}
+.search{display:flex;gap:10px;margin-top:18px;background:#fff;border:2px solid #111820;border-radius:14px;padding:10px;box-shadow:0 12px 30px rgba(17,24,32,.08)}
+.search select{flex:1;border:0;font-family:inherit;font-size:16px;padding:10px;background:transparent;color:#111820}
+.search button{border:0;background:#1F5F8B;color:#fff;font-family:inherit;font-weight:700;font-size:15px;padding:12px 24px;border-radius:9px;cursor:pointer}
+.tiles{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin:26px 0 0}
+.tile{position:relative;min-height:190px;border-radius:18px;overflow:hidden;display:flex;align-items:flex-end;padding:20px;color:#fff}
+.tile img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform 1s cubic-bezier(.2,.8,.2,1)}
+.tile:hover img{transform:scale(1.06)}
+.tile::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(9,20,30,.86),rgba(9,20,30,.18))}
+.tile .t{position:relative;z-index:2}
+.tile b{display:block;font-size:20px;font-weight:700;letter-spacing:.04em}
+.tile span{font-size:13px;opacity:.88}
+.tile .ar{position:absolute;right:18px;bottom:20px;z-index:2;width:34px;height:34px;border-radius:50%;border:2px solid rgba(255,255,255,.8);display:grid;place-items:center;font-size:16px}
+.tile.wide{grid-column:span 2;min-height:150px}
+.sec{padding:44px 0}
+.sh{display:flex;align-items:center;gap:12px;margin-bottom:16px}
+.sh h2{font-size:19px;font-weight:700;letter-spacing:.04em}
+.sh a{margin-left:auto;font-size:13.5px;font-weight:700;color:#1F5F8B}
+.prods{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.prods a{border:1px solid #e9edf1;border-radius:14px;padding:14px;text-align:center;transition:box-shadow .3s,transform .3s}
+.prods a:hover{box-shadow:0 10px 26px rgba(17,24,32,.09);transform:translateY(-2px)}
+.prods .ph{height:110px;display:flex;align-items:center;justify-content:center}
+.prods img{max-height:100%;width:auto;object-fit:contain}
+.prods b{display:block;margin-top:10px;font-size:13.5px;font-weight:700}
+.prods span{font-size:11.5px;color:#8a96a3}
+.evs{display:grid;gap:10px}
+.evs li{display:grid;grid-template-columns:78px 1fr auto;gap:14px;align-items:center;border:1px solid #e9edf1;border-radius:14px;padding:14px}
+.evs .d{background:#EAF2F7;border-radius:10px;text-align:center;padding:8px 4px;line-height:1.25}
+.evs .d b{display:block;font-size:19px;font-weight:700;color:#1F5F8B}
+.evs .d span{font-size:10.5px;color:#53606d}
+.evs .ti{font-weight:700;font-size:15px}
+.evs .pl{font-size:12.5px;color:#8a96a3}
+.evs .btn{background:#111820;color:#fff;font-size:13px;font-weight:700;padding:10px 16px;border-radius:999px;white-space:nowrap}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.steps li{border:1px solid #e9edf1;border-radius:14px;padding:16px;display:flex;gap:12px;align-items:flex-start}
+.steps .n{flex:none;width:28px;height:28px;border-radius:50%;background:#1F5F8B;color:#fff;font-weight:700;font-size:13px;display:grid;place-items:center}
+.steps b{display:block;font-size:14.5px;font-weight:700}
+.steps p{font-size:12.5px;color:#65707c;margin-top:2px}
+.vs{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.vs li{background:#F5F8FA;border-radius:14px;padding:18px}
+.vs q{font-size:14px;line-height:1.95;display:block}
+.vs cite{display:block;font-style:normal;margin-top:10px;font-size:11.5px;color:#8a96a3}
+.lineb{background:#06C755;border-radius:18px;padding:26px;color:#fff;display:flex;gap:18px;align-items:center;flex-wrap:wrap}
+.lineb b{font-size:19px;font-weight:700;display:block}
+.lineb p{font-size:13.5px;opacity:.95}
+.lineb a{margin-left:auto;background:#fff;color:#06C755;font-weight:700;padding:13px 26px;border-radius:999px;font-size:14.5px}
+footer{border-top:1px solid #e9edf1;margin-top:34px;padding:26px 0 90px;font-size:12px;color:#8a96a3}
+.fixed{position:fixed;left:0;right:0;bottom:0;z-index:50;display:none;gap:8px;padding:9px 12px calc(9px + env(safe-area-inset-bottom));background:rgba(255,255,255,.96);border-top:1px solid #e9edf1;backdrop-filter:blur(10px)}
+.fixed a{flex:1;text-align:center;font-weight:700;font-size:13.5px;padding:12px 6px;border-radius:12px;border:2px solid #111820}
+.fixed a.p{background:#1F5F8B;border-color:#1F5F8B;color:#fff}
+.fixed a.l{background:#06C755;border-color:#06C755;color:#fff}
+[data-rv]{opacity:0;transform:translateY(14px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.8,.2,1)}
+[data-rv].in{opacity:1;transform:none}
+@media(max-width:820px){
+ .hb a.find{display:none}
+ .tiles{grid-template-columns:1fr 1fr;gap:10px}.tile{min-height:150px;padding:14px}.tile b{font-size:17px}
+ .prods{grid-template-columns:repeat(2,1fr)}.steps,.vs{grid-template-columns:1fr}
+ .evs li{grid-template-columns:64px 1fr;gap:10px}.evs .btn{grid-column:2;justify-self:start;margin-top:4px}
+ .lineb a{margin-left:0;width:100%;text-align:center}
+ .fixed{display:flex}
+ .search{flex-direction:column}
+}
+</style></head><body>
+<header><div class="wrap"><div class="hb">
+  <div class="m">ディメンション・ゼロ<span>DIMENSION ZERO</span></div>
+  <a class="find sp" href="#salons">サロンを探す</a>
+  <a class="line" href="https://lin.ee/uV9wFms" target="_blank" rel="noopener">公式LINE</a>
+</div></div></header>
+
+<div class="top">
+  <div class="wrap">
+    <h1>お近くのディメンションサロンを探す</h1>
+    <p>全国41サロン。都道府県を選ぶと、連絡先と地図が出ます。</p>
+    <form class="search" onsubmit="return false" id="salons">
+      <select aria-label="都道府県"><option>都道府県を選ぶ</option><option>福岡</option><option>佐賀</option><option>長崎</option><option>熊本</option><option>大分</option><option>宮崎</option><option>鹿児島</option><option>沖縄</option><option>東京</option><option>神奈川</option><option>埼玉</option><option>千葉</option><option>愛知</option><option>大阪</option><option>兵庫</option><option>広島</option><option>岡山</option><option>北海道</option><option>Hawaii</option></select>
+      <button type="submit">探す</button>
+    </form>
+    <div class="tiles">
+      <a class="tile" href="#"><img src="../img/stock/salon-ocean.jpg" alt=""><div class="t"><b>はじめての方へ</b><span>体験のながれと、料金の目安</span></div><span class="ar">›</span></a>
+      <a class="tile" href="#products"><img src="../img/p-all.jpg" alt=""><div class="t"><b>製品を見る</b><span>6つのデバイス</span></div><span class="ar">›</span></a>
+      <a class="tile" href="#events"><img src="../img/stock/gathering.jpg" alt=""><div class="t"><b>イベント</b><span>オハナシ会・体験会</span></div><span class="ar">›</span></a>
+      <a class="tile" href="#"><img src="../img/stock/salon-room.jpg" alt=""><div class="t"><b>サロンを開きたい方</b><span>提携サロン募集</span></div><span class="ar">›</span></a>
+    </div>
+  </div>
+</div>
+
+<section class="sec" id="products">
+  <div class="wrap">
+    <div class="sh"><h2>ディメンションシリーズ</h2><a href="#">すべて見る →</a></div>
+    <div class="prods" data-rv><a href="#"><div class="ph"><img src="../img/p-pro-fixed.jpg" alt=""></div><b>プロ</b><span>サロン専用機</span></a><a href="#"><div class="ph"><img src="../img/p-rhythm.jpg" alt=""></div><b>リズム</b><span>ご家庭用</span></a><a href="#"><div class="ph"><img src="../img/p-wave.jpg" alt=""></div><b>ウェーブ</b><span>ご家庭用</span></a><a href="#"><div class="ph"><img src="../img/p-beauty.jpg" alt=""></div><b>ビューティー</b><span>ご家庭用</span></a><a href="#"><div class="ph"><img src="../img/p-music.jpg" alt=""></div><b>ミュージック</b><span>ご家庭用</span></a><a href="#"><div class="ph"><img src="../img/p-pad.jpg" alt=""></div><b>パッド</b><span>ご家庭用</span></a></div>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:0">
+  <div class="wrap">
+    <div class="sh"><h2>体験までの3ステップ</h2></div>
+    <ul class="steps" data-rv><li><div class="n">1</div><div><b>お近くのサロンに連絡する</b><p>全国41か所。地域を選ぶと連絡先が出ます。</p></div></li><li><div class="n">2</div><div><b>サロンで約35分すごす</b><p>音と光に包まれる時間を、ゆったりと。</p></div></li><li><div class="n">3</div><div><b>暮らしに持ち帰る</b><p>気に入ったら、ご家庭用デバイスを。</p></div></li></ul>
+  </div>
+</section>
+
+<section class="sec" id="events" style="padding-top:0">
+  <div class="wrap">
+    <div class="sh"><h2>これからのイベント</h2><a href="#">一覧 →</a></div>
+    <ul class="evs" data-rv><li><div class="d"><b>18</b><span>2026/10</span></div><div><div class="ti">開発者ZAKのオハナシ会</div><div class="pl">鹿児島市・財団本部</div></div><a class="btn" href="#">申し込む</a></li><li><div class="d"><b>03</b><span>2026/11</span></div><div><div class="ti">ディメンションサロン体験会</div><div class="pl">福岡市中央区</div></div><a class="btn" href="#">申し込む</a></li></ul>
+  </div>
+</section>
+
+<section class="sec" id="voices" style="padding-top:0">
+  <div class="wrap">
+    <div class="sh"><h2>体験された方の声</h2><a href="#">もっと読む →</a></div>
+    <ul class="vs" data-rv><li><q>どんどん沈んでいき、行き着くところまでいくと、今度はどんどん開いていく。最後には何もなくなって、すっきりしました</q><cite>福岡県 女性</cite></li><li><q>一瞬、身体の中で川のような流れを感じました。終わったら頭がふわふわで、心地よい気だるさ</q><cite>東京都 女性</cite></li><li><q>寝室に置いて、寝る前にしばらく聞くようにしました。スマホをいじる習慣が自然とやめられました</q><cite>東京都 女性</cite></li></ul>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:0">
+  <div class="wrap">
+    <div class="lineb">
+      <div><b>迷ったら、公式LINEへ。</b><p>お住まいの地域を送っていただければ、近いサロンをお返しします。</p></div>
+      <a href="https://lin.ee/uV9wFms" target="_blank" rel="noopener">友だち追加する</a>
+    </div>
+  </div>
+</section>
+
+<footer><div class="wrap">© 2026 Dimension Zero Foundation　／　デザイン案E（一目でわかる）・構成サンプル／写真はイメージ</div></footer>
+
+<div class="fixed">
+  <a class="p" href="#salons">サロンを探す</a>
+  <a href="#events">イベント</a>
+  <a class="l" href="https://lin.ee/uV9wFms" target="_blank" rel="noopener">公式LINE</a>
+</div>
+<a class="pbadge" href="index.html">パターンE｜一目でわかる　<span>ほかの案を見る</span></a><script>
+(function(){var els=document.querySelectorAll('[data-rv]');
+if(!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion:reduce)').matches){
+  els.forEach(function(e){e.classList.add('in')});return;}
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.18,rootMargin:'0px 0px -8%'});
+els.forEach(function(e){io.observe(e)});})();
+</script></body></html>
