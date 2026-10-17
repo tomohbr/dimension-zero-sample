@@ -129,8 +129,9 @@ footer{padding:26px 0 44px;color:#8a96a3;font-size:12.5px}
   if(saved.__note)document.getElementById('note').value=saved.__note;
   function save(){try{localStorage.setItem(KEY,JSON.stringify(saved))}catch(e){}paint();}
   document.getElementById('copy').onclick=function(){
-    memo.select();memo.setSelectionRange(0,99999);
-    try{document.execCommand('copy');this.textContent='コピーしました';var b=this;setTimeout(function(){b.textContent='決定メモをコピー'},1600)}catch(e){}
+    var b=this, done=function(ok){b.textContent=ok?'コピーしました':'うまくコピーできませんでした。上のメモを長押しして全選択→コピーしてください';setTimeout(function(){b.textContent='決定メモをコピー'},ok?1600:6000)};
+    var legacy=function(){memo.removeAttribute('readonly');memo.select();memo.setSelectionRange(0,99999);var ok=false;try{ok=document.execCommand('copy')}catch(e){}done(ok)};
+    if(navigator.clipboard&&window.isSecureContext){navigator.clipboard.writeText(memo.value).then(function(){done(true)},legacy)}else{legacy()}
   };
   document.getElementById('reset').onclick=function(){
     if(!confirm('選んだ内容を消します。よろしいですか？'))return;
